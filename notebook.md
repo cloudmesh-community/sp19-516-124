@@ -21,7 +21,7 @@
   * Environment: I created a pure Windows installation on VirtualBox should I run into conflicts on my laptop. 
   * Environment: I installed PyCharm Educational on my laptop and Virtual box environment. I learned how to add libraries to my project in PyCharm. I started a LinkedInLearning overview tutorial of the PyCharm IDE.
   
- * Week 01/28/2019-02/03/2019:
+* Week 01/28/2019-02/03/2019:
   
   * Read through the most recent version of the book to evalate for changes and re-read the class expectations.
   * Read through chapters 7, 8 and 50% of chapter 9 including exploring resource links and references in the chapters.
