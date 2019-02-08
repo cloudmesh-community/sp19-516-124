@@ -5,3 +5,17 @@ owner:
   hid: sp19-516-124
   community: e516
   semester: sp19
+section:
+  - title: Open Lambda
+    keyword
+    github:
+    issue : https://github.com/cloudmesh-community/book/issues/251
+  - title: Google IaaS Cloud Services 
+    keyword
+    github:
+    issue : https://github.com/cloudmesh-community/book/issues/244
+chapter:
+  - title: MongoDB
+    url
+    github:
+    issue : https://github.com/cloudmesh-community/book/issues/302
