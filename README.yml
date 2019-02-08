@@ -7,15 +7,15 @@ owner:
   semester: sp19
 section:
   - title: Open Lambda
-    keyword
+    keyword:
     github:
-    issue : https://github.com/cloudmesh-community/book/issues/251
+    issue: https://github.com/cloudmesh-community/book/issues/251
   - title: Google IaaS Cloud Services 
-    keyword
+    keyword:
     github:
-    issue : https://github.com/cloudmesh-community/book/issues/244
+    issue: https://github.com/cloudmesh-community/book/issues/244
 chapter:
   - title: MongoDB
-    url
+    url:
     github:
-    issue : https://github.com/cloudmesh-community/book/issues/302
+    issue: https://github.com/cloudmesh-community/book/issues/302
