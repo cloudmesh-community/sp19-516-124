@@ -8,14 +8,14 @@ Serverless Computation with OpenLambda PDF slide material is available at: [Slid
 Communication is available at the following Slack Development Channel (You will need to create an account if you do not already have one): [Slack](https://open-lambda.slack.com/).
 
 # Suggested Materials 
-Wat:[Wat](https://www.destroyallsoftware.com/talks/wat).
+Wat:[Wat](https://www.destroyallsoftware.com/talks/wat.
 
-History of Containers: [History of Containers](https://www.youtube.com/watch?v=hgN8pCMLI2U.
+History of Containers:(https://www.youtube.com/watch?v=hgN8pCMLI2U.
 
-AFS benchmarking:[AFS benchmarking](http://www.cs.cmu.edu/~coda/docdir/s11.pdf.
+AFS benchmarking:(http://www.cs.cmu.edu/~coda/docdir/s11.pdf.
 
 # Development
-OpenLambda source code it available on github (all material bellows was sourced from github):[Github Link]( https://github.com/open-lambda/open-lambda).
+OpenLambda source code it available on github (all material below have been sourced from github):[Github Link]( https://github.com/open-lambda/open-lambda).
 
 # OpenLambda
 
