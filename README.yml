@@ -7,13 +7,14 @@ owner:
   semester: sp19
 section:
   - title: Open Lambda
-    keyword:
     github:
     issue: https://github.com/cloudmesh-community/book/issues/251
   - title: Google IaaS Cloud Services 
-    keyword:
     github:
     issue: https://github.com/cloudmesh-community/book/issues/244
+  - title: Spelling Correction
+    github:
+    issue:https://github.com/cloudmesh-community/book/pull/332#pullrequestreview-199359120
 chapter:
   - title: MongoDB
     url:
