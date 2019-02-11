@@ -37,7 +37,8 @@
   * Created (2) new Ubuntu VM's (v16 and 18)for work with "make demo" open api exercise example. Also working through example of Windows 10.
   * Completed initial draft for a Openlambda section and noted progress in github for item: https://github.com/cloudmesh-community/book/issues/251.
   * Attended open hours on 2/7/2019.
-  * Started reviewing "libcloud" and Azure for my project "Azure VM Management". 
+  * Started reviewing "libcloud" and Azure for my project "Azure VM Management".
+    * Reviewed https://libcloud.apache.org/  and watched a youtube video regarding libcloud.
     * This consists of locating and reviewing Azure API Management support for OpenAPI Specification whitepapaers
     * Started getting familiar with Azure portal and VM's.
   * Cordinated with Keli Fine on section for Google IaaS Cloud Service and working on adding to existing section material. I should have something in the next few days. Item I am referencing: https://github.com/cloudmesh-community/book/issues/244
