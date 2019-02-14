@@ -7,7 +7,7 @@ owner:
   semester: sp19
 section:
   - title: Open Lambda
-    github:
+    github: https://github.com/cloudmesh-community/sp19-516-124/blob/master/openlambda.md
     issue: https://github.com/cloudmesh-community/book/issues/251
   - title: Google IaaS Cloud Services 
     github:
