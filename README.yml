@@ -21,7 +21,7 @@ section:
     github:
     issue:https://github.com/cloudmesh-community/book/pull/332#pullrequestreview-199359120
   - title: Addition of mainframe detail for the book.
-    github:
+    github: https://github.com/cloudmesh-community/book/pull/336/conflicts
     issue:https://github.com/cloudmesh-community/book/pull/338#pullrequestreview-199402192
 chapter:
   - title: MongoDB
