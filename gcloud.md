@@ -267,7 +267,7 @@ service for virtual machines and containers.
 
 To demonstrate an example of what Google IaaS solutions are available, you can navigate to following link: https://cloud.google.com/solutions/
 
-Here you will find a “Try for Free” button option on the top right portion of the webpage. This is the link it took me when I clicked the button. https://console.cloud.google.com/freetrial/signup/tos?_ga=2.102660295.-779866669.1550427921
+Here you will find a “Try for Free” button option on the top right portion of the webpage. 
 The free trial allows a person access to all Cloud Platform Products
 You get everything you need to build and run your apps, websites and services, including Firebase and the Google Maps API.
 Note, you will be asked you for your credit card to make sure you are not a robot. You won’t be charged unless you manually upgrade to a paid account. Disclaimer: Please be aware that you pay for this service only after you accrue costs, via an automatic charge when you reach your billing threshold or 30 days after your last automatic payment, whichever comes first.
