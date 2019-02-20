@@ -268,13 +268,16 @@ service for virtual machines and containers.
 To demonstrate an example of what Google IaaS solutions are available, you can navigate to following link: https://cloud.google.com/solutions/
 
 Here you will find a “Try for Free” button option on the top right portion of the webpage. 
-The free trial allows a person access to all Cloud Platform Products
+The free trial allows a person access to all Cloud Platform Products.
 You get everything you need to build and run your apps, websites and services, including Firebase and the Google Maps API.
-Note, you will be asked you for your credit card to make sure you are not a robot. You won’t be charged unless you manually upgrade to a paid account. Disclaimer: Please be aware that you pay for this service only after you accrue costs, via an automatic charge when you reach your billing threshold or 30 days after your last automatic payment, whichever comes first.
+Note, you will be asked you for your credit card to make sure you are not a robot. 
+You won’t be charged unless you manually upgrade to a paid account. 
+Disclaimer: Please be aware that you pay for this service only after you accrue costs, via an automatic charge when you reach your billing threshold or 30 days after your last automatic payment, whichever comes first.
 You will be presented the option to agree and continue. Once you satisfy all the formalities you will be granted the 12-month free trial.
 
 ### Google Cloud Console Overview
-The following is material presented from the “Cloud Console Tour”. The following information will cover the core features of Cloud Console to get you ready to build and manage your applications on Google Cloud Platform.
+The following is material presented from the “Cloud Console Tour”. 
+The following information will cover the core features of Cloud Console to get you ready to build and manage your applications on Google Cloud Platform.
 You'll learn about the following concepts:
 * GCP projects and resources
 * High-level resource overview and activity logs
@@ -284,11 +287,15 @@ You'll learn about the following concepts:
 * GCP's browser-based command line
 
 ### Use GCP Resources
-GCP resources are the fundamental components that make up all Google Cloud services. Resources are organized hierarchically and help organize your work on GCP.
-Projects are the first level of the resource hierarchy, and they contain other low-level resources like Cloud Storage buckets and Compute Engine instances.
-Project navigation
-Easily navigate across your GCP projects using the scopepicker in Cloud Console. Switching projects will tailor the view to that project and all of its child resources.
-Scope Picker Figure:
+GCP resources are the fundamental components that make up all Google Cloud services. 
+Resources are organized hierarchically and help organize your work on GCP.
+Projects are the first level of the resource hierarchy, and they contain other low-level resources like Cloud Storage buckets and Compute Engine instances. Project navigation Easily navigate across your GCP projects using the scopepicker in Cloud Console. Switching projects will tailor the view to that project and all of its child resources.
+
+### Project navigation
+Easily navigate across your GCP projects using the scopepicker in Cloud Console. 
+Switching projects will tailor the view to that project and all of its child resources.
+
+![ScopePicker](images/ScopePicker.JPG){#fig:ScopePicker}
  
 The following link provides more detail regarding resources:
 https://cloud.google.com/resource-manager/docs/cloud-platform-resource-hierarchy
@@ -296,7 +303,9 @@ https://cloud.google.com/resource-manager/docs/cloud-platform-resource-hierarchy
 ### Navigate Google Cloud Services
 Service navigation
 Google Cloud services are accessible in the left-hand navigation menu organized by product area including Big Data, Compute, Networking, etc.
-Left Hand Navigation Figure:
+
+![LeftHandNavigation](images/LeftHandNavigation.JPG){#fig:LeftHandNavigation}
+
  
 ### Section pinning
 For any service that you visit regularly, pin the section to the top of the navigation menu by hovering over the section item and clicking the pin icon.
@@ -312,16 +321,16 @@ Customize Figure:
 With Activity Stream, you'll be able to understand all the activities that occur across your GCP resources in one place.
 See what your teammates are updating in any project to track down issues and audit access. Easily filter through the feed to find exactly what you need.
 
-Activity Figure:
+![Activity](images/Activity.png){#fig:Activity}
  
 
 ### Search across Cloud Console
 The search bar in Cloud Console allows you to quicklyaccess Google Cloud products and any of your resources across GCP.
 Try running a search for App Engine or the name of one of your projects.
 
-Search Bar Figure:
- 
+![SearchBar](images/SearchBar.JPG){#fig:SearchBar}
 
+ 
 ### Get support anytime
 If you ever get stuck, or need help navigating the world of GCP, our support team is here to help.
 Access support from the navigation menu.
@@ -340,8 +349,8 @@ https://cloud.google.com/iam/docs/
 Google Cloud Shell provides you with command-line access to your cloud resources directly from your browser. You can easily manage your projects and resources without having to install the Google Cloud SDK or other tools on your system.
 With   Cloud Shell, the Cloud SDK gcloud command-line tool and other utilities you need are always available, up to date and fully authenticated when you need them.
 
-Cloud Shell Figure:
- 
+![CloudShell](images/CloudShell.JPG){#fig:CloudShell}
+
 
 The following link provides additional detail about the cloud shell:
 https://cloud.google.com/shell/
@@ -352,8 +361,7 @@ Navigate to Compute Engine
 Open the menu on the left side of the console.
 Then, select the Compute Engine section.
 
-Menu figure:
- 
+![Menu](images/Menu.JPG){#fig:Menu}
 
 ### Create a virtual machine instance
 Click the Create instance button.
@@ -385,14 +393,13 @@ Wait for the instance creation to finish
 The instance creation needs to finish before the tutorial can proceed. 
 The activity can be tracked by clicking the notification menu from the navigation bar at the top.
 
-### Connect to the instance
-Enter the following command to SSH into the VM. If this is your first time using SSH from Cloud Shell, you will need to create a private key. 
+To Connect to the instance, enter the following command to SSH into the VM. If this is your first time using SSH from Cloud Shell, you will need to create a private key. 
 Enter the zone and name of the instance you created.
-EX: ("gcloud compute --project \"regal-buckeye-232200" ssh --zone \<vm-zone> <vm-name>")
+EX: {"gcloud compute --project \"regal-buckeye-232200" ssh --zone \<vm-zone> <vm-name>"}
 
 ### Run a simple web server
 Create a simple index.html file with the following command inside the parenthesis and double quotes:
-("echo <h1>Hello World</h1>" > index.html")
+{"echo <h1>Hello World</h1>" > index.html"}
 
 Then, enter this command to run a simple Python webserver inside the parenthesis :
 "sudo python -m SimpleHTTPServer 80"
