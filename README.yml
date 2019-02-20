@@ -11,8 +11,15 @@ section:
     issue: https://github.com/cloudmesh-community/book/issues/251
   - title: Google IaaS
     author: Keli Fine, Andrew Garbe
-    hid: "enter in keli hid andrew hid seperated by space"
-    github: https://github.com/cloudmesh-community/sp19-516-124/blob/master/openlambda.md
+    hid: "sp19-516-125 sp19-516-124"
+    github: https://github.com/cloudmesh-community/sp19-516-124/gcloud.md
+    github: https://github.com/cloudmesh-community/sp19-516-124/Activity.png
+    github: https://github.com/cloudmesh-community/sp19-516-124/CloudShell.JPG
+    github: https://github.com/cloudmesh-community/sp19-516-124/Customize.JPG
+    github: https://github.com/cloudmesh-community/sp19-516-124/LeftHandNavigation.JPG
+    github: https://github.com/cloudmesh-community/sp19-516-124/Menu.JPG
+    github: https://github.com/cloudmesh-community/sp19-516-124/ScopePicker.JPG
+    github: https://github.com/cloudmesh-community/sp19-516-124/SearchBar.JPG
     issue: https://github.com/cloudmesh-community/book/issues/251
   - title: Google IaaS Cloud Services 
     github:
