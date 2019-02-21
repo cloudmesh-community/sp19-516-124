@@ -295,7 +295,7 @@ Projects are the first level of the resource hierarchy, and they contain other l
 Easily navigate across your GCP projects using the scopepicker in Cloud Console. 
 Switching projects will tailor the view to that project and all of its child resources.
 
-![scopepicker](images/scopepicker.JPG){#fig:scopepicker}
+![scopepicker](images/scopepicker.jpg){#fig:scopepicker}
  
 The following link provides more detail regarding resources:
 https://cloud.google.com/resource-manager/docs/cloud-platform-resource-hierarchy
@@ -304,7 +304,7 @@ https://cloud.google.com/resource-manager/docs/cloud-platform-resource-hierarchy
 Service navigation
 Google Cloud services are accessible in the left-hand navigation menu organized by product area including Big Data, Compute, Networking, etc.
 
-![lefthandnavigation](images/lefthandnavigation.JPG){#fig:lefthandnavigation}
+![lefthandnavigation](images/lefthandnavigation.jpg){#fig:lefthandnavigation}
 
  
 ### Section pinning
@@ -328,7 +328,7 @@ See what your teammates are updating in any project to track down issues and aud
 The search bar in Cloud Console allows you to quicklyaccess Google Cloud products and any of your resources across GCP.
 Try running a search for App Engine or the name of one of your projects.
 
-![searchbar](images/searchbar.JPG){#fig:searchbar}
+![searchbar](images/searchbar.jpg){#fig:searchbar}
 
  
 ### Get support anytime
@@ -349,7 +349,7 @@ https://cloud.google.com/iam/docs/
 Google Cloud Shell provides you with command-line access to your cloud resources directly from your browser. You can easily manage your projects and resources without having to install the Google Cloud SDK or other tools on your system.
 With   Cloud Shell, the Cloud SDK gcloud command-line tool and other utilities you need are always available, up to date and fully authenticated when you need them.
 
-![cloudshell](images/cloudshell.JPG){#fig:cloudshell}
+![cloudshell](images/cloudshell.jpg){#fig:cloudshell}
 
 
 The following link provides additional detail about the cloud shell:
@@ -361,7 +361,7 @@ Navigate to Compute Engine
 Open the menu on the left side of the console.
 Then, select the Compute Engine section.
 
-![menu](images/menu.JPG){#fig:menu}
+![menu](images/menu.jpg){#fig:menu}
 
 ### Create a virtual machine instance
 Click the Create instance button.
