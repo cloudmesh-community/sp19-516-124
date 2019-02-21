@@ -295,7 +295,7 @@ Projects are the first level of the resource hierarchy, and they contain other l
 Easily navigate across your GCP projects using the scopepicker in Cloud Console. 
 Switching projects will tailor the view to that project and all of its child resources.
 
-![ScopePicker](images/ScopePicker.JPG){#fig:ScopePicker}
+![scopepicker](images/scopepicker.JPG){#fig:scopepicker}
  
 The following link provides more detail regarding resources:
 https://cloud.google.com/resource-manager/docs/cloud-platform-resource-hierarchy
@@ -304,7 +304,7 @@ https://cloud.google.com/resource-manager/docs/cloud-platform-resource-hierarchy
 Service navigation
 Google Cloud services are accessible in the left-hand navigation menu organized by product area including Big Data, Compute, Networking, etc.
 
-![LeftHandNavigation](images/LeftHandNavigation.JPG){#fig:LeftHandNavigation}
+![lefthandnavigation](images/lefthandnavigation.JPG){#fig:lefthandnavigation}
 
  
 ### Section pinning
@@ -321,14 +321,14 @@ Customize Figure:
 With Activity Stream, you'll be able to understand all the activities that occur across your GCP resources in one place.
 See what your teammates are updating in any project to track down issues and audit access. Easily filter through the feed to find exactly what you need.
 
-![Activity](images/Activity.png){#fig:Activity}
+![activity](images/activity.png){#fig:activity}
  
 
 ### Search across Cloud Console
 The search bar in Cloud Console allows you to quicklyaccess Google Cloud products and any of your resources across GCP.
 Try running a search for App Engine or the name of one of your projects.
 
-![SearchBar](images/SearchBar.JPG){#fig:SearchBar}
+![searchbar](images/searchbar.JPG){#fig:searchbar}
 
  
 ### Get support anytime
@@ -349,7 +349,7 @@ https://cloud.google.com/iam/docs/
 Google Cloud Shell provides you with command-line access to your cloud resources directly from your browser. You can easily manage your projects and resources without having to install the Google Cloud SDK or other tools on your system.
 With   Cloud Shell, the Cloud SDK gcloud command-line tool and other utilities you need are always available, up to date and fully authenticated when you need them.
 
-![CloudShell](images/CloudShell.JPG){#fig:CloudShell}
+![cloudshell](images/cloudshell.JPG){#fig:cloudshell}
 
 
 The following link provides additional detail about the cloud shell:
@@ -361,7 +361,7 @@ Navigate to Compute Engine
 Open the menu on the left side of the console.
 Then, select the Compute Engine section.
 
-![Menu](images/Menu.JPG){#fig:Menu}
+![menu](images/menu.JPG){#fig:menu}
 
 ### Create a virtual machine instance
 Click the Create instance button.
@@ -399,7 +399,7 @@ EX: {"gcloud compute --project \"regal-buckeye-232200" ssh --zone \<vm-zone> <vm
 
 ### Run a simple web server
 Create a simple index.html file with the following command inside the parenthesis and double quotes:
-{"echo <h1>Hello World</h1>" > index.html"}
+{"echo Hello World index.html"}
 
 Then, enter this command to run a simple Python webserver inside the parenthesis :
 "sudo python -m SimpleHTTPServer 80"
