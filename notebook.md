@@ -35,7 +35,7 @@
 # Week 02/04/2019-02/10/2019:
   
   * Created (2) new Ubuntu VM's (v16 and 18)for work with "make demo" open api exercise example. Also working through example of Windows 10.
-  * Completed initial draft for a Openlambda section and noted progress in github for item: https://github.com/cloudmesh-community/book/issues/251.
+  * Completed initial draft for addition to existing section "Google IaaS". Placed my work here: https://github.com/cloudmesh-community/sp19-516-124/blob/master/gcloud.md.
   * Attended open hours on 2/7/2019.
   * Started reviewing "libcloud" and Azure for my project "Azure VM Management".
     * Reviewed https://libcloud.apache.org/  and watched a youtube video regarding libcloud.
@@ -44,4 +44,18 @@
   * Cordinated with Keli Fine on section for Google IaaS Cloud Service and working on adding to existing section material. I should have something in the next few days. Item I am referencing: https://github.com/cloudmesh-community/book/issues/244
   * Read through 9.11 Github REST Services. Next step is working through examples.
   * Updated my github readme so that it reflects my efforts.
+  
+# Week 02/11/2019-02/17/2019:
+  
+  * Obtained an Imac to work along with OSX examples. Installed pyCharm and started getting familiar with navigating a Mac.
+  * Started initial draft for a "Google IaaS" section, contrubuting additional material started by Keli Fine. Noted progress in github for item: https://github.com/cloudmesh-community/book/issues/251.
+  * Performed an out of band meeting with Gregor to align on expection and recieve guidance.
+  * Fixed pull issue with my local github as requested by Gregor.
+  * Start reviewing Apache libcloud site with regard to my projects (Azure VM's)
+  
+ # Week 02/18/2019-02/24/2019:
+  
+  * Completed and posted initial draft for a "Google IaaS" section, contrubuting additional material started by Keli Fine. Noted progress in github for item: https://github.com/cloudmesh-community/book/issues/251. (known issues I still need to work on to merge this with master per Gregor).
+  * Created (2) Linux VM's in Azure and started work, including solution for the following Piazza request per Gregor: https://piazza.com/class/jql1e30dxswzu?cid=207
+  
   
