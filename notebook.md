@@ -58,4 +58,11 @@
   * Completed and posted initial draft for a "Google IaaS" section, contrubuting additional material started by Keli Fine. Noted progress in github for item: https://github.com/cloudmesh-community/book/issues/251. (known issues I still need to work on to merge this with master per Gregor).
   * Created (2) Linux VM's in Azure and started work, including solution for the following Piazza request per Gregor: https://piazza.com/class/jql1e30dxswzu?cid=207
   
+ # Week 02/25/2019-03/03/2019:
   
+  * Completed Piazza question and Azure work related to: "Azure: ex_cloud_service_name (asm provider)"tps://piazza.com/class/jql1e30dxswzu?cid=207
+  
+ # Week 03/04/2019-03/10/2019:
+  
+  * Install CM5 on Windows 10 and video review of CM5 command line.
+  * Video: https://www.youtube.com/watch?v=NUX2xVivVzQ
