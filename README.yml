@@ -6,9 +6,9 @@ owner:
   community: e516
   semester: sp19
 section:
-  - title: Open Lambda
-    github: https://github.com/cloudmesh-community/sp19-516-124/blob/master/openlambda.md
-    issue: https://github.com/cloudmesh-community/book/issues/251
+  - title: Google IaaS Cloud Services
+    github: https://github.com/cloudmesh-community/sp19-516-124/blob/master/gcloud.md
+    issue: https://github.com/cloudmesh-community/book/issues/244
   - title: Google IaaS
     author: Keli Fine, Andrew Garbe
     hid: "sp19-516-125 sp19-516-124"
@@ -21,9 +21,9 @@ section:
     github: https://github.com/cloudmesh-community/sp19-516-124/ScopePicker.JPG
     github: https://github.com/cloudmesh-community/sp19-516-124/SearchBar.JPG
     issue: https://github.com/cloudmesh-community/book/issues/251
-  - title: Google IaaS Cloud Services 
-    github:
-    issue: https://github.com/cloudmesh-community/book/issues/244
+  - title: Open Lambda 
+    github: https://github.com/cloudmesh-community/sp19-516-124/blob/master/openlambda.md
+    issue: https://github.com/cloudmesh-community/book/issues/251
   - title: Spelling Correction
     github:
     issue:https://github.com/cloudmesh-community/book/pull/332#pullrequestreview-199359120
