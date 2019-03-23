@@ -6,21 +6,11 @@ owner:
   community: e516
   semester: sp19
 section:
-  - title: Google IaaS Cloud Services
-    github: https://github.com/cloudmesh-community/sp19-516-124/blob/master/gcloud.md
-    issue: https://github.com/cloudmesh-community/book/issues/244
   - title: Google IaaS
     author: Keli Fine, Andrew Garbe
     hid: "sp19-516-125 sp19-516-124"
-    github: https://github.com/cloudmesh-community/sp19-516-124/gcloud.md
-    github: https://github.com/cloudmesh-community/sp19-516-124/Activity.png
-    github: https://github.com/cloudmesh-community/sp19-516-124/CloudShell.JPG
-    github: https://github.com/cloudmesh-community/sp19-516-124/Customize.JPG
-    github: https://github.com/cloudmesh-community/sp19-516-124/LeftHandNavigation.JPG
-    github: https://github.com/cloudmesh-community/sp19-516-124/Menu.JPG
-    github: https://github.com/cloudmesh-community/sp19-516-124/ScopePicker.JPG
-    github: https://github.com/cloudmesh-community/sp19-516-124/SearchBar.JPG
-    issue: https://github.com/cloudmesh-community/book/issues/251
+    github: https://github.com/cloudmesh-community/book/tree/master/chapters/iaas/gcloud
+    issue: https://github.com/cloudmesh-community/book/issues/244
   - title: Open Lambda 
     github: https://github.com/cloudmesh-community/sp19-516-124/blob/master/openlambda.md
     issue: https://github.com/cloudmesh-community/book/issues/251
@@ -38,5 +28,5 @@ chapter:
 project:
   - title: Azure VM Management (Using libcloud)
     url:
-    github:
+    github: https://github.com/cloudmesh-community/sp19-516-124/tree/master/ProjectCode
     issue:
