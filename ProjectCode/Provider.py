@@ -21,6 +21,7 @@ class Provider(ComputeNodeABC):
     # secgroups
     # keys
 
+    #Andrew Garbe- both libcloud references have already been added.
     ProviderMapper = {
         "openstack": LibcloudProvider.OPENSTACK,
         "aws": LibcloudProvider.EC2,
@@ -112,7 +113,14 @@ class Provider(ComputeNodeABC):
                     key_file=path_expand(cred['AZURE_KEY_FILE'])
 
                 )
+            #Andrew Garbe - added a consideration for the azure_arm driver:
+            elif self.cloudtype == 'azure_arm':
 
+                self.cloudman = self.driver(
+                    subscription_id=cred['AZURE_SUBSCRIPTION_ID'],
+                    key_file=path_expand(cred['AZURE_KEY_FILE'])
+
+                )
             elif self.cloudtype == 'aws':
 
                 self.cloudman = self.driver(
