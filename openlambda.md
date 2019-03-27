@@ -1,4 +1,9 @@
 # About OpenLambda
+
+:o: license section is strange
+
+:o: url links are worn they need to be in <>
+
 Cloud computing is evolving. All major public cloud providers now support serverless computing such as AWS Lambda, Google Cloud Functions (Alpha) and Azure Function.
 Serverless computing introduces many new research challenges in the areas of sandboxing, session management, load balancing, and databases.
 To facilitate work in these areas, OpenLambda is building an open-source serverless computing platform.
@@ -8,6 +13,7 @@ Serverless Computation with OpenLambda PDF slide material is available at: [Slid
 Communication is available at the following Slack Development Channel (You will need to create an account if you do not already have one): (https://open-lambda.slack.com/).
 
 ## Suggested Materials 
+
 Wat: https://www.destroyallsoftware.com/talks/wat.
 
 History of Containers:https://www.youtube.com/watch?v=hgN8pCMLI2U.
@@ -357,6 +363,7 @@ TODO(Ed): concise description of the architecture.
 
 (details are derived from the following as mentioned below: https://github.com/open-lambda/open-lambda/blob/master/LICENSE.md)
 
+```
 This project is licensed under the Apache License - see the [LICENSE.md](LICENSE.md) file for details.
  An OpenLambda worker requires a local file-system location to store handler code, logs, and various other data. Thus, when starting a new local cluster, the first step is to indicate where the cluster data should reside with the new command:
    admin new --cluster=<ROOT>
@@ -399,6 +406,7 @@ TODO(Tyler): document the configuration parameters and how they interact. Also d
 Architecture
 TODO(Ed): concise description of the architecture.
 License
+```
 This project is licensed under the Apache License - see the LICENSE.md file for details.
 
 
