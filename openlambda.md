@@ -7,24 +7,24 @@ Serverless Computation with OpenLambda PDF slide material is available at: [Slid
 
 Communication is available at the following Slack Development Channel (You will need to create an account if you do not already have one): (https://open-lambda.slack.com/).
 
-# Suggested Materials 
+## Suggested Materials 
 Wat: https://www.destroyallsoftware.com/talks/wat.
 
 History of Containers:https://www.youtube.com/watch?v=hgN8pCMLI2U.
 
 AFS benchmarking:http://www.cs.cmu.edu/~coda/docdir/s11.pdf.
 
-# Development
+## Development
 OpenLambda source code it available on github (all material below have been sourced from github):[Github Link](https://github.com/open-lambda/open-lambda).
 
-# OpenLambda
+## OpenLambda
 
 OpenLambda is an Apache-licensed serverless computing project, written
 in Go and based on Linux containers.  The primary goal of OpenLambda
 is to enable exploration of new approaches to serverless computing.  Our
 research agenda is described in more detail in a [HotCloud '16
 paper](https://www.usenix.org/system/files/conference/hotcloud16/hotcloud16_hendrickson.pdf).
-
+All detail has been sourced from https://github.com/open-lambda/open-lambda
 ## Getting Started
 
 OpenLambda relies heavily on operations that require root privilege. To
@@ -353,7 +353,9 @@ specify dependencies.
 
 TODO(Ed): concise description of the architecture.
 
-## License
+## License (to-do) review with Gregor. 
+
+(details are derived from the following as mentioned below: https://github.com/open-lambda/open-lambda/blob/master/LICENSE.md)
 
 This project is licensed under the Apache License - see the [LICENSE.md](LICENSE.md) file for details.
  An OpenLambda worker requires a local file-system location to store handler code, logs, and various other data. Thus, when starting a new local cluster, the first step is to indicate where the cluster data should reside with the new command:
