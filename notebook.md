@@ -61,6 +61,7 @@
 # Week 03/11/2019-03/17/2019:
   * Out of band meeting with Gregor.
   * Project: libcloud ASM\ARM testing methods with my Azure instances.
+  * Cloudmesh install and test.
   
 # Week 03/18/2019-03/24/2019:
   * Section: Completed IaaS - Google Cloud Platform addition.
