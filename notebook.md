@@ -68,5 +68,5 @@
   * Project: libcloud ASM\ARM testing methods with my Azure instances.
   
 # Week 03/25/2019-03/31/2019:
-  * Section: FaaS - Openlamda work.
+  * Section: FaaS - Openlamda section completed.
   * Project: libcloud ARM testing methods with my Azure instances. Succcessful work using Azure CLI interacting with my Azure environment.
