@@ -28,5 +28,5 @@ chapter:
 project:
   - title: Azure VM Management (Using libcloud)
     url:
-    github: https://github.com/cloudmesh-community/sp19-516-124/tree/master/ProjectCode
+    github: https://github.com/cloudmesh-community/sp19-516-124/tree/master/project-code
     issue:
