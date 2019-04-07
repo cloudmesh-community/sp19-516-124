@@ -30,6 +30,22 @@ Once you have set up the Azure Student account, you will gain access the Azure e
 
 TBD
 
+Apache Libcloud is a Python library which hides differences between different cloud provider APIs and allows you to manage different cloud resources through a unified and easy to use API. For additional reference and/or more detail, you can read at <https://libcloud.readthedocs.io/en/latest/index.html>. 
+The Azure ASM Compute Driver allows you to integrate with Microsoft Azure Virtual Machines service using the Azure Service Management (ASM) API. This is the “Classic” API, please note that it is incompatible with the newer Azure Resource Management (ARM) API, which is provided by the azure arm driver.
+
+### Connecting to Azure
+To connect to Azure, you need your subscription ID and certificate file.
+
+#### Generating and uploading a certificate file and obtaining subscription ID
+To be able to connect to the Azure, you need to generate a X.509 certificate which is used to authenticate yourself and upload it to the Azure Management Portal.
+On Linux, you can generate the certificate file using the commands shown below:
+
+```bash
+$  openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout azure_cert.pem -out azure_cert.pem
+$  openssl x509 -inform pem -in azure_cert.pem -outform der -out azure_cert.cer
+```
+
+
 ## Apache Libcloud Azure ARM Compute Driver
 
 TBD
