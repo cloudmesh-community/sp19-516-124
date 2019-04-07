@@ -26,6 +26,8 @@ The Azure student account FAQ will likely answer questions you might have pertai
 
 Once you have set up the Azure Student account, you will gain access the Azure environment through the Azure Portal <https://portal.azure.com>. To log in, please use the credentials you determined during the set up.
 
+### Create a Ubuntu Server 18.04 LTS Virtual Machine in Azure
+
 ## Apache Libcloud Azure ASM Compute Driver
 
 TBD
