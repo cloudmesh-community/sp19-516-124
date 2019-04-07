@@ -19,7 +19,7 @@ TBD
 
 TBD
 
-## Setup - Student Azure Portal
+### Setup - Student Azure Portal
 To start working in the Azure environment, you will to first need to set up an Azure Student Account. 
 You can set up and activate an Azure student account at <https://azure.microsoft.com/en-us/free/students/>. 
 The Azure student account FAQ will likely answer questions you might have pertaining to an Azure Student Account, what you will have access to, how long you will enjoy access, and additional general overview information including terms of the account. <https://azure.microsoft.com/en-us/free/free-account-students-faq/>
