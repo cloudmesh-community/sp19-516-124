@@ -45,6 +45,8 @@ $  openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout azure_cert.pem -o
 $  openssl x509 -inform pem -in azure_cert.pem -outform der -out azure_cert.cer
 ```
 
+Since I am using Windows 10 to work with the ASM Compute Driver in PyCharm,
+I used the WINSCP application to connect to my Linux machine so that I can copy the "azure_cert.pem" certificate that was generated in my Linux `/home` directory to any location of my choosing on my Windows 10 machines file system. An example would be `C:\Users\Andrew.garbe\Downloads\2019 Spring Data Science\Project\azure_cert.pem`.
 
 ## Apache Libcloud Azure ARM Compute Driver
 
