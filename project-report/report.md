@@ -28,8 +28,24 @@ Once you have set up the Azure Student account, you will gain access the Azure e
 
 ## Apache Libcloud Azure ASM Compute Driver
 
+TBD
+
 ## Apache Libcloud Azure ARM Compute Driver
+
+TBD
 
 ## Microsoft Azure CLI
 
+TBD
+
 ## Azure SDK for Python
+
+TBD
+
+## Conclusion
+
+TBD
+
+## Acknowledgement
+
+TBD
