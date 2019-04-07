@@ -28,6 +28,8 @@ Once you have set up the Azure Student account, you will gain access the Azure e
 
 ### Create a Ubuntu Server 18.04 LTS Virtual Machine in Azure
 
+TBD
+ 
 ## Apache Libcloud Azure ASM Compute Driver
 
 TBD
