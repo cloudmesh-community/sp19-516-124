@@ -121,7 +121,7 @@ An example of an Integration that I have had success with is creating an Azure c
 An example of Python code example of creating a Azure cloud service named “e503CloudServicetest” would look like this:
 
 ```
-ex_create_cloud_service(name, location, description=None, extended_properties=None)
+#ex_create_cloud_service(name, location, description=None, extended_properties=None)
 driver.ex_create_cloud_service('e503CloudServicetest', 'Central US', description=None, extended_properties=None)
 ```
 
