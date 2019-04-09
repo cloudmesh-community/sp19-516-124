@@ -22,6 +22,12 @@ TBD
 ### Setup - Student Azure Portal
 To start working in the Azure environment, you will to first need to set up an Azure Student Account. 
 You can set up and activate an Azure student account at <https://azure.microsoft.com/en-us/free/students/>. 
+
+When you sign up for an Azure free account, you get a Free Trial subscription, which provides you $200 in Azure credits for 30 days and 12 months of free services. At the end of 30 days, Azure disables your subscription. Your subscription is disabled to protect you from accidentally incurring charges for usage beyond the credit and free services included with your subscription. To continue using Azure services, you must upgrade your subscription to a Pay-As-You-Go subscription. After you upgrade, your subscription still has access to free services for 12 months. You only get charged for usage beyond the free services and quantities.
+
+The Azure Student Account requires that you to activate the account after 30 days of use. 
+If you do not activate, you will loose access to your Azure Student Account and can not use the services.
+
 The Azure student account FAQ will likely answer questions you might have pertaining to an Azure Student Account, what you will have access to, how long you will enjoy access, and additional general overview information including terms of the account. <https://azure.microsoft.com/en-us/free/free-account-students-faq/>
 
 Once you have set up the Azure Student account, you will gain access the Azure environment through the Azure Portal <https://portal.azure.com>. To log in, please use the credentials you determined during the set up.
