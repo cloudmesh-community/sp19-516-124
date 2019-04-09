@@ -135,6 +135,27 @@ Once the `ex_create_cloud_service` Python code has been executed, I am now able 
 
 TBD
 
+Apache Libcloud is a Python library which hides differences between different cloud provider APIs and allows you to manage different cloud resources through a unified and easy to use API. For additional reference and/or more detail, you can read at https://libcloud.readthedocs.io/en/latest/compute/drivers/azure_arm.html. 
+
+The Azure driver allows you to integrate with Microsoft Azure Virtual Machines provider using the Azure Resource Management (ARM) API. Azure Virtual Machine service allows you to launch Windows and Linux virtual servers in many datacenters across the world. To connect to Azure you need your tenant ID and subscription ID.
+
+### Creating a Service Principal
+The following directions are based on creating an azure Service Principal. This process can be performed using either Powershell or    through the Azure Portal. 
+
+ * PowerShell Service Principal creation: 
+   The following supporting information and steps are used to create an Azure Service Principal using Windows PowerShell:
+<https://azure.microsoft.com/en-us/documentation/articles/resource-group-authenticate-service-principal/>. 
+
+ * Azure Portal Service Principal creation: 
+   The following supporting information and steps are used to create an Azure Service Principal using the Azure Portal:
+<https://docs.microsoft.com/en-us/azure/active-directory/develop/howto-create-service-principal-portal>.
+
+Note: This process assumes that you have an active Azure Student Subscription.
+
+I have created the service principal using the Azure Portal. Here are the steps to perform the process:
+
+TBD
+
 ## Microsoft Azure CLI
 
 TBD
