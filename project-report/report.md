@@ -152,7 +152,109 @@ The following directions are based on creating an azure Service Principal. This 
 
 Note: This process assumes that you have an active Azure Student Subscription.
 
-I have created the service principal using the Azure Portal. Here are the steps to perform the process:
+The following steps show you how to create a new Azure Active Directory application and service principal that can be used with the role-based access control. 
+When you have code that needs to access or modify resources, you can create an identity for the app. This identity is known as a service principal. 
+You can then assign the required permissions to the service principal. 
+
+The follwoing steps will show you how to use the Azure Portal to create the service principal. 
+The steps outline a single-tenant application where the application is intended to run within only one organization. 
+You typically use single-tenant applications for line-of-business applications that run within your organization.
+This is modifiyed to suit my project and has been derived from the following steps: <https://docs.microsoft.com/en-us/azure/active-directory/develop/howto-create-service-principal-portal>
+
+First connect to the Azure Portal and login: <https://portal.azure.com>
+Then select the Azure `Active Directory` option.
+Choose `App Registrations` in the under the `Manage` section:
+
+![@label](images/appregistrations.png)
+
+Next, select the `New application registration` option:
+
+![@label](images/newappregistration.png)
+
+Provide a name and URL for the application. I made up a fake URL for my app. 
+
+Next, select `Web app / API` for the type of application you want to create. 
+Note: You cannot create credentials for a Native application. 
+To read more about this you can access the following supporting information: <https://docs.microsoft.com/en-us/azure/active-directory/manage-apps/application-proxy-configure-native-client-application>.
+
+After setting the values, select `Create` to create your Azure AD application and service principal.
+
+![@label](images/createapp.png)
+
+The result of the app creation should resemble something close to the following:
+
+![@label](images/e503testapp.png)
+
+### Assign the application to a role
+To access resources in your subscription, you must assign the application to a role.
+You can set the scope at the level of the subscription, resource group, or resource. Permissions are inherited to lower levels of scope. For example, adding an application to the Reader role for a resource group means it can read the resource group and any resources it contains.
+
+Next select the `All services` option.
+Under the `General` section chose `Subscriptions`:
+
+![@label](images/subscriptions_two.png)
+
+Chose the Subscription to assign the Application ID to. For example, my Subscrition is `Azure for Students`: 
+
+![@label](images/subscriptiondetail.png)
+
+If you do not see the Subscription  that you are looking for, select `global subscriptions` filter. 
+Make sure the subscription you want is selected for the portal.
+
+Select the `Access control (IAM)` option. 
+
+![@label](images/accesscontroliam.png)
+
+Choose the `Add a Role Assignment option`:
+
+![@label](images/addroleassignment.png)
+
+To allow the application to execute actions like `reboot`, `start` and `stop` instances, select the `Contributor` role. 
+
+By default, Azure AD applications are not displayed in the available options. To find your application, search for the name and select it. 
+
+Select `Save` to finish assigning the role. 
+You see your application in the list of users assigned to a role for that scope.
+
+![@label](images/contributer.png)
+
+A service principal is now set up.
+
+### Get values for signing in (Get Tenant ID)
+When programmatically signing in, you need to pass the tenant ID with your authentication request.
+
+Connect to the Azure Portal and login: <https://portal.azure.com>
+Select the `Azure Active Directory Default Direcctory overview` select the `Properties` option.
+
+![@label](images/defaultdirectoryproperties.png)
+
+Copy the `Directory ID` to get your `Tenant ID`.
+
+![@label](images/directoryid.png)
+
+### Get an Application ID and Authentication Key
+You also need the ID for your application and an authentication key. 
+To get those values, use the following steps:
+
+Select App registrations in Azure AD, select your application:
+
+![@label](images/andrewtestapp.png)
+
+Copy the `Application ID`so that you can store it in your application code.
+Do this by choosing the application `Settings` and locating `Keys`, then selecting `Keys`.
+
+![@label](images/applicationsettingskey.png)
+
+Provide a description of the key, and a duration for the key. When done, select `Save`.
+After saving the key, the value of the key is displayed. 
+
+Copy this value because you are not able to retrieve the key later. You provide the key value with the application ID to sign in as the application. Store the key value where your application can retrieve it.
+
+
+
+
+
+
 
 TBD
 
