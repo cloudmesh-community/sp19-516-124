@@ -288,7 +288,6 @@ Under the `Azure for Students` section, locate the `My Permissions` option:
 ![@label](images/mypermissions.png)
 
 This will show your account permission. For Example:
-
 ![@label](images/resourceproviderstatus.png)
 
 View your assigned roles and determine if you have adequate permissions to assign an AD app to a role. 
