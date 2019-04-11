@@ -250,11 +250,49 @@ After saving the key, the value of the key is displayed.
 
 Copy this value because you are not able to retrieve the key later. You provide the key value with the application ID to sign in as the application. Store the key value where your application can retrieve it.
 
+### Required permissions
+You must have sufficient permissions to register an application with your Azure AD tenant and assign the application to a role in your Azure subscription.
+To do so, first check your Azure Active Directory permissions
+Select the `Azure Active Directory` option.
+Then select `User Settings` in the `Default Directory – Overview` section :
 
+![@label](images/defaultdirectoryusersetting.png)
 
+Next, check the App registrations setting. 
+Note: This value can only be set by an administrator. If set to `Yes`, any user in the Azure AD tenant can register an app.
 
+![@label](images/appregistrationyes.png)
 
+If the app registrations setting is set to `No`, only users with an administrator role may register these types of applications. 
 
+See available roles <https://docs.microsoft.com/en-us/azure/active-directory/users-groups-roles/directory-assign-admin-roles#available-roles> and role permissions <https://docs.microsoft.com/en-us/azure/active-directory/users-groups-roles/directory-assign-admin-roles#role-permissions> to learn about available administrator roles and the specific permissions in Azure AD that are given to each role. 
+
+If your account is assigned to the `User` role, but the app registration setting is limited to admin users, you will need an administrator to either assign you to one of the `administrator` roles that can create and manage all aspects of app registrations, or to enable users to register apps.
+
+### Check Azure subscription permissions
+In your Azure subscription, your account must have `Microsoft.Authorization/*/Write` access to assign an AD app to a role. This action is granted through the Owner role or User Access Administrator role. 
+
+If your account is assigned to the `Contributor` role, you do not have adequate permission. You will receive an error when attempting to assign the service principal to a role.
+
+To check your subscription permissions:
+Select the `All services` option under the `General` section, Then choose `Subscriptions`:
+
+![@label](images/subscriptionsthree.png)
+
+Choose the Subscription to assign the Application ID to. For example, my Subscription is `Azure for Students`:
+
+![@label](images/azureforstudents.png)
+
+Under the `Azure for Students` section, locate the `My Permissions` option:
+
+![@label](images/mypermissions.png)
+
+This will show your account permission. For Example:
+
+![@label](images/resourceproviderstatus.png)
+
+View your assigned roles and determine if you have adequate permissions to assign an AD app to a role. 
+If not, an administrator will need to add you to the `User Access Administrator` role. In the following image, the user is assigned to the `User Access Administrator` role, which means that user has adequate permissions.
 
 TBD
 
