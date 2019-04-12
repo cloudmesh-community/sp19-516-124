@@ -293,6 +293,37 @@ This will show your account permission. For Example:
 View your assigned roles and determine if you have adequate permissions to assign an AD app to a role. 
 If not, an administrator will need to add you to the `User Access Administrator` role. In the following image, the user is assigned to the `User Access Administrator` role, which means that user has adequate permissions.
 
+### Instantiating an Libcloud Azure ARM Compute Driver 
+Use `<Application_Id>` for “key” and the `<Your_Password>` for “secret”.
+
+
+Once you have the `tenant id`, `subscription id`, `application id (“key”)`, and `password (“secret”)`, you can create an AzureNodeDriver:
+
+![@label](images/instantiatearmdriverdetail.png)
+
+To interact with my Azure VMs, I have chosen the method to start a VM that is currently in a stopped state. 
+This would be accomplished with the `ex_start_node` method listed in the ARM driver documentation :
+
+![@label](images/exstartnode.png)
+
+This is the Python code that I generated in order to test this method (Note: at the time of this writing this command did not return successfully)
+
+```
+from libcloud.compute.types import Provider
+from libcloud.compute.providers import get_driver
+
+cls = get_driver(Provider.AZURE_ARM)
+driver = cls(tenant_id='<YourTenantIDHere>',
+             subscription_id='<YourSubscriptionIDHere>',
+             key='<YourKeyHere>',
+             secret='<YourKeyHere>',
+             region='centralus',
+             )
+
+#driver.ex_start_node()
+driver.ex_start_node('TheNameOfMyLinuxVM')
+```
+
 TBD
 
 ## Microsoft Azure CLI
