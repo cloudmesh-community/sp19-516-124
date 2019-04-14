@@ -35,6 +35,99 @@ Once you have set up the Azure Student account, you will gain access the Azure e
 ### Create a Ubuntu Server 18.04 LTS Virtual Machine in Azure
 
 TBD
+In an effort to interact with an Azure Virtual Machine using Apache LibCloud, Azure SDK and/or Azure CLI, I have created a virtual machine for interaction. Here are the steps that I performed to create a Linux Ubuntu Server. 
+
+To start, go to the Azure Portal <https://portal.azure.com>.
+Next, the locate the `Virtual Machines` option and select it:
+
+![@label](images/virtualmachines.png)
+
+Then to create a new virtual machine, select `Add`:
+
+![@label](images/addvirtualmachines.png)
+
+This will present you the configuration options needed to create a new virtual machine:
+
+![@label](images/createavirtualmachine.png)
+
+To configure a machine, I chose the following options:
+Subscription: “Azure for Students” (default)
+
+Resource Group: `AndrewCloudSevicetest` (Create new one if you do not have an available option.)
+
+Virtual Machine Name: `EfiveothreeTest`
+
+Region: `Central US` (default)
+
+Availability Options: `No infrastructure redundancy required` (default)
+
+Image: `Ubuntu Server 18.04 LTS`
+
+Size: `Standard D2s v3, 2 vcpus, 8GB memory`
+
+Authentication type: `password` (Choose a username and a password that meet the requirements).
+
+The next configuration section is `Disks`:
+
+![@label](images/disks.png)
+
+I chose all the default configurations settings except for `OS disk type`, of which I selected the `Standard SSD` option.
+
+For `Networking` I chose all the default configuration settings:
+
+![@label](images/networking.png)
+
+For `Management` I chose all the default configuration settings:
+
+![@label](images/management.png)
+
+Last, I created the virtual machine:
+
+![@label](images/createvmvalidation.png)
+
+Once the new VM has been created, Naviagate back to the `Virtual machines` and now discover your Virtual Machine:
+
+![@label](images/newvmaftercreation.png)
+
+After creation the virtual machine will be in a `running` status. You will want to decide if you want your virtual machine in a `running` status, else stop the VM so that you do not waste resources. 
+
+### Remote access the Virtual Machine 
+To access my virtual machine, I used Putty client< https://www.putty.org/>.
+
+To use Putty and access the virtual machine, I have configured a DNS name in Azure.
+This is performed in the Virtual Machine configuration under `DNS name`:
+
+![@label](images/dns.png)
+
+Click `Configure`.
+I chose a `static` IP setting so that so that I will not have to look up a dynamic IP:
+
+![@label](images/static.png)
+
+Then click `save`.
+
+Note: If you have not configured the `port` that connection will occur, then connection will not be successful.
+
+In your Virtual machine settings click `Connect` and review the connection settings.
+I have designed `port 22` to be the port that will remote connect to the virtual machine:
+
+![@label](images/conncetandport.png)
+
+Next, I launched the Putty client and enter in my DNS name of the virtual machine to connect to the machine:
+
+![@label](images/putty.png)
+
+The first time the environment is accessed Putty, Putty will prompt to cache your servers host key. 
+I selected `Yes` when prompted:
+
+![@label](images/cacheputtykey.png)
+
+After the key is cached, next time you enter the Puttry client, you will be prompted to enter your server credentials as specified in the virtual machine setup.
+
+Once credentials are provided, you will be logged into your virtual machine:
+
+![@label](images/loggedinviaputty.png)
+
  
 ## Apache Libcloud Azure ASM Compute Driver
 
