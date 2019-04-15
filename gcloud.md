@@ -269,11 +269,11 @@ service for virtual machines and containers.
 * [Cloud Filestore](https://cloud.google.com/filestore/): High-performance file storage.
 * [Drive Enterprise](https://cloud.google.com/drive-enterprise/): Cloud-based content collaboration and storage.
 
-# Google IaaS Example
+### Google IaaS Example
 
-To demonstrate an example of what Google IaaS solutions are available, Google has provided theese options: https://cloud.google.com/solutions/
+To demonstrate an example of what Google IaaS solutions are available, Google has provided theese options: <https://cloud.google.com/solutions/>
 
-Locate the “Try for Free” button option on the top right portion of the webpage. 
+Locate the `Try for Free` button option on the top right portion of the webpage. 
 The free trial allows a person access to all Cloud Platform Products.
 You get everything you need to build and run your apps, websites and services, including Firebase and the Google Maps API.
 Note, you will be asked you for your credit card to make sure you are not a robot. 
@@ -282,7 +282,7 @@ Disclaimer: Please be aware that you pay for this service only after you accrue 
 You will be presented the option to agree and continue. Once you satisfy all the formalities you will be granted the 12-month free trial.
 
 ### Google Cloud Console Overview
-This material was obtained from Google on the “Cloud Console Tour”. 
+This material was obtained from Google on the `Cloud Console Tour`. 
 This information covers the core features of Cloud Console to get you ready to build and manage your applications on Google Cloud Platform.
 You will learn about the following concepts:
 * GCP projects and resources
@@ -305,7 +305,7 @@ Switching projects will tailor the view to that project and all of its child res
 Scope Picker Example
  
 More detail regarding resources can be found at:
-https://cloud.google.com/resource-manager/docs/cloud-platform-resource-hierarchy
+<https://cloud.google.com/resource-manager/docs/cloud-platform-resource-hierarchy>
 
 ### Navigate Google Cloud Services
 Service navigation
@@ -344,15 +344,15 @@ Searchbar Example
 If you ever get stuck, or need help navigating the world of GCP, the Google support team is here to help.
 Access support from the navigation menu.
 
-More information regarding support options and details can be found at: https://cloud.google.com/support/
+More information regarding support options and details can be found at: <https://cloud.google.com/support/>
 
 ### Manage users and permissions
 Google Cloud Identity and Access Management (Cloud IAM) enables you to manage and create permissions for your GCP resources.
-As your team continues to grow, you can grant access to teammates using Cloud IAM in the "IAM & Admin" section.
+As your team continues to grow, you can grant access to teammates using Cloud IAM in the `IAM & Admin` section.
 Add users, groups, or service accounts and assign them any number of roles to grant them the permissions they need.
 
-Additianl resources for Google Cloud Identity and Access Management documentation:
-https://cloud.google.com/iam/docs/
+Additional resources for Google Cloud Identity and Access Management documentation:
+<https://cloud.google.com/iam/docs/>
  
 ### Access the command line from your browser
 Google Cloud Shell provides you with command-line access to your cloud resources directly from your browser. You can easily manage your projects and resources without having to install the Google Cloud SDK or other tools on your system.
@@ -363,13 +363,13 @@ Cloudshell Example
 
 
 Reference to more documented detail about the Cloudshell:
-https://cloud.google.com/shell/
+<https://cloud.google.com/shell/>
 
 ## Create a VM Example
 Since we have been exploring virtual machines in this class, I thought that I would provide an additional example explaining how to create a Linux virtual machine instance in Compute Engine using the Google Cloud Platform Console.
 Navigate to Compute Engine
 Open the menu on the left side of the console.
-Then, select the Compute Engine section.
+Then, select the `Compute Engine` section.
 
 ![@label](images/menu.jpg)
 Menu Example
@@ -391,29 +391,36 @@ While the instance is being created take your time to explore the VM instances p
 Compute Engine lets you use virtual machines that run on Google's infrastructure. 
 Create micro-VMs or larger instances running Debian, Windows, or other standard images. Create your first VM instance, import it using a migration service, or try a quickstart to build a sample app.
 More detail can be found at the following link regarding VM instances:
-https://cloud.google.com/compute/?hl=en_US&_ga=2.98598104.-779866669.1550427921
+<https://cloud.google.com/compute/?hl=en_US&_ga=2.98598104.-779866669.1550427921>
 
 ### Connect to your instance
 When the VM instance is created, you'll run a web server on the virtual machine.
 The SSH buttons in the table will open up an SSHsession to your instance in a separate window.
+
 For this tutorial you will connect using Cloud Shell. 
 Cloud Shell is a built-in command line tool for the console.
+
 Open the Cloud Shell
-Open Cloud Shell by clicking the "Activate Cloud Shell" button in the navigation bar in the upper-right corner of the console.
+Open Cloud Shell by clicking the `Activate Cloud Shell` button in the navigation bar in the upper-right corner of the console.
 Wait for the instance creation to finish
 The instance creation needs to finish before the tutorial can proceed. 
 The activity can be tracked by clicking the notification menu from the navigation bar at the top.
 
 To Connect to the instance, enter the following command to SSH into the VM. If this is your first time using SSH from Cloud Shell, you will need to create a private key. 
 Enter the zone and name of the instance you created.
-EX: ```gcloud compute --project \"regal-buckeye-232200" ssh --zone \<vm-zone> <vm-name>```
+
+```bash
+$  gcloud compute --project \"regal-buckeye-232200" ssh --zone \<vm-zone> <vm-name>
+```
 
 ### Run a simple web server
 Create a simple index.html file with the following command inside the parenthesis and double quotes:
 ```echo Hello World index.html```
 
 Then, enter this command to run a simple Python webserver:
-```sudo python -m SimpleHTTPServer 80```
+```bash
+$  sudo python -m SimpleHTTPServer 80
+```
 
 ### Visit your application
 Visit your webserver at the IP address listed in the External IP column.
@@ -423,4 +430,4 @@ To remove your instance, select the checkbox next to your instance name and clic
 
 It is recommended to review the Google Cloud Platform on Github for additional examples.
 Here is the link to the GCP on GitHub:
-https://github.com/GoogleCloudPlatform
+<https://github.com/GoogleCloudPlatform>.
