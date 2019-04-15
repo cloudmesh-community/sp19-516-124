@@ -1,11 +1,5 @@
 # Google IaaS Cloud Services {#sec:google-products}
 
-:o: please review markdown rules on how to cite python code
-
-:o: We recommend that you use the `@label` to refer to figures by name and not use following or previous.
-
-:o: do not use contractions such as you'll it is you will
-
 Google Cloud, offered by Google, is a suite of cloud computing
 services that runs on the same infrastructure that Google uses
 internally for its end-user products, such as Google Search and
