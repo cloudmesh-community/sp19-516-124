@@ -417,15 +417,110 @@ driver = cls(tenant_id='<YourTenantIDHere>',
 driver.ex_start_node('TheNameOfMyLinuxVM')
 ```
 
-TBD
-
 ## Microsoft Azure CLI
 
-TBD
+The Azure CLI is a command-line tool allows for interaction and management of Azure resources. The current version of the CLI is 2.0.63. For more information about releases please visit the following link <https://docs.microsoft.com/en-us/cli/azure/release-notes-azure-cli?view=azure-cli-latest>.
+To find your installed version and see if you need to update, run `az --version`.
 
-## Azure SDK for Python
+I will go through the installation and interaction on a Windows set up <https://docs.microsoft.com/en-us/cli/azure/install-azure-cli-windows?view=azure-cli-latest>, however you can find details about the Azure CLI setup on other machines here:<https://docs.microsoft.com/en-us/cli/azure/install-azure-cli?view=azure-cli-latest>. 
 
-TBD
+### Install or update
+The MSI distributable is used for installing, updating, and uninstalling the az command on Windows.
+
+To download the installed click on the following:
+
+![@label](images/downloadthemsaiinstaller.png)
+
+When the installer asks if it can make changes to your computer, click the `Yes` box.
+
+You can now run the Azure CLI with the az command from either Windows Command Prompt or PowerShell. PowerShell offers some tab completion features not available from Windows Command Prompt. To sign in, run the az login command.
+
+Once you have installed the CLI and have been able to successfully login, you can reference the following steps to interact with an Azure environment with the CLI tool:
+<https://docs.microsoft.com/en-us/cli/azure/get-started-with-azure-cli?view=azure-cli-latest>.
+
+### Sign in
+Before using any CLI commands with a local install, you need to sign in with az login.
+
+![@label](images/azlogin.png)
+
+You may be directed and prompted to provide your credentials through a web browser if you are not currently actively logged in already. Once your credentials have been provided successfully, you will receive a message as follows:
+
+![@label](images/youhaveloggedin.png)
+
+After logging in, you see a list of subscriptions associated with your Azure account. 
+The subscription information with `isDefault: true` is the currently activated subscription after logging in. 
+
+To select another subscription, use the `az account set` command with the subscription ID to switch to. 
+For more information about subscription selection, see <https://docs.microsoft.com/en-us/cli/azure/manage-azure-subscriptions-azure-cli?view=azure-cli-latest>
+
+
+#### Common commands
+This following are some common commands used in the CLI:.
+
+#### Resource group
+`az group`
+
+#### Virtual machines
+`az vm`
+
+#### Storage accounts
+`az storage account`
+
+#### Key Vault
+`az keyvault`
+
+#### Web applications
+`az webapp`
+
+#### SQL databases
+`az sql server`
+
+#### CosmosDB
+`az cosmosdb`
+
+
+### Finding commands
+Commands in the CLI are organized as commands of groups. Each group represents an Azure service, and commands operate on that service.
+To search for commands, use az find. For example, to search for command names containing secret, use the following command: `az find secret`:
+
+![@label](images/azfindsecret.png)
+
+Use the `—help` argument to get a complete list of commands and subgroups of a group. For example, to find the CLI commands for working with Network Security Groups (NSGs):
+
+![@label](images/aznetworknsg.png)
+
+The CLI has full tab completion for commands under the bash shell.
+
+#### Globally available arguments
+There are some arguments that are available for every command.
+* `--help` prints CLI reference information about commands and their arguments and lists available subgroups and commands.
+* `--output` changes the output format. The available output formats are json, jsonc (colorized JSON), tsv (Tab-Separated Values), table (human-readable ASCII tables), and yaml. By default the CLI outputs json. To learn more about the available output formats, see: <https://docs.microsoft.com/en-us/cli/azure/format-output-azure-cli?view=azure-cli-latest>
+* `--query` uses the JMESPath query language to filter the output returned from Azure services. To learn more about queries, see <https://docs.microsoft.com/en-us/cli/azure/query-azure-cli?view=azure-cli-latest> and the `JMESPath tutorial` :<http://jmespath.org/tutorial.html>.
+* `--verbose` prints information about resources created in Azure during an operation, and other useful information.
+* `--debug` prints even more information about CLI operations, used for debugging purposes. If you find a bug, provide output generated with the --debug flag on when submitting a bug report.
+
+#### Interactive mode
+The CLI offers an interactive mode that automatically displays help information and makes it easier to select subcommands. You enter interactive mode with the az interactive command `az interactive`:
+
+![@label](images/azinteractive.png)
+
+For more information on interactive mode, see Azure CLI Interactive Mode: <https://docs.microsoft.com/en-us/cli/azure/interactive-azure-cli?view=azure-cli-latest?>
+
+#### Learn CLI basics with quickstarts and tutorials
+To get you started with the Azure CLI, try an in-depth tutorial for setting up virtual machines and using the power of the CLI to query Azure resources.
+
+You can access the tutorial material at the following link:
+<https://docs.microsoft.com/en-us/cli/azure/azure-cli-vm-tutorial?view=azure-cli-latest>
+
+There are also quickstarts for other popular services.
+* Create a storage account using the Azure CLI
+* Transfer objects to/from Azure Blob storage using the CLI
+* Create a single Azure SQL database using the Azure CLI
+* Create an Azure Database for MySQL server using the Azure CLI
+* Create an Azure Database for PostgreSQL using the Azure CLI
+* Create a Python web app in Azure
+* Run a custom Docker Hub image in Azure Web Apps for Containers
+
 
 ## Conclusion
 
