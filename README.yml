@@ -9,24 +9,16 @@ section:
   - title: Google IaaS
     author: Keli Fine, Andrew Garbe
     hid: "sp19-516-125 sp19-516-124"
-    github: https://github.com/cloudmesh-community/book/blob/master/chapters/iaas/gcloud/gcloud.md
-    issue: https://github.com/cloudmesh-community/book/issues/244
-  - title: Open Lambda 
-    github: https://github.com/cloudmesh-community/book/blob/master/chapters/faas/openlambda.md
-    issue: https://github.com/cloudmesh-community/book/issues/251
+    url: https://github.com/cloudmesh-community/book/blob/master/chapters/iaas/gcloud/gcloud.md
+  - title: Open Lambda
+    url: https://github.com/cloudmesh-community/book/blob/master/chapters/faas/openlambda.md
   - title: Spelling Correction
-    github:
-    issue:https://github.com/cloudmesh-community/book/pull/332#pullrequestreview-199359120
+    url: https://github.com/cloudmesh-community/book/pull/332#pullrequestreview-199359120
   - title: Addition of mainframe detail for the book.
-    github: https://github.com/cloudmesh-community/book/pull/336/conflicts
-    issue:https://github.com/cloudmesh-community/book/pull/338#pullrequestreview-199402192
+    url: https://github.com/cloudmesh-community/book/pull/338#pullrequestreview-199402192
 chapter:
   - title: Azure 
-    url:
-    github: https://github.com/cloudmesh-community/book/blob/master/chapters/iaas/azure/azure.md
-    issue: 
+    url: https://github.com/cloudmesh-community/book/blob/master/chapters/iaas/azure/azure.md
 project:
   - title: Azure VM Management Report (using Libcloud ASM\ARM\Azure CLI)
-    url:
-    github: https://github.com/cloudmesh-community/sp19-516-124/tree/master/project-code
-    issue:
+    url: https://github.com/cloudmesh-community/sp19-516-124/tree/master/project-code
