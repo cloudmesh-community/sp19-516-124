@@ -9,7 +9,7 @@ section:
   - title: Google IaaS
     author: Keli Fine, Andrew Garbe
     hid: "sp19-516-125 sp19-516-124"
-    github: https://github.com/cloudmesh-community/book/tree/master/chapters/iaas/gcloud
+    github: https://github.com/cloudmesh-community/book/blob/master/chapters/iaas/gcloud/gcloud.md
     issue: https://github.com/cloudmesh-community/book/issues/244
   - title: Open Lambda 
     github: https://github.com/cloudmesh-community/sp19-516-124/blob/master/openlambda.md
