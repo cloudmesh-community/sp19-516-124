@@ -9,7 +9,11 @@
 
 ## Abstract
 
-TBD
+Microsoft Azure is one of the leading cloud computing provides on the market today. 
+With government, business and other organizations that have chosen this cloud computing technology, 
+it would be unreasonable to think that any large-scale environment would be solely managed through the Azure portal GUI interface. 
+
+The solution to effectively managing an Azure environment would occur through integration with technologies that make managing the Azure environment scalable and efficient.
 
 ## Introduction
 
