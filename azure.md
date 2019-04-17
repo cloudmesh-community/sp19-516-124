@@ -227,10 +227,7 @@ Source: <https://docs.microsoft.com/en-us/azure/virtual-machines/windows/media/q
 
 ## Create a Ubuntu Server 18.04 LTS Virtual Machine in Azure
 
-TBD
-In an effort to interact with an Azure Virtual Machine using Apache LibCloud, 
-Azure SDK and/or Azure CLI, I have created a virtual machine for interaction. 
-Here are the steps that I performed to create a Linux Ubuntu Server. 
+Here are the steps to create a Ubuntu Server 18.04 LTS Virtual Machine in Azure. 
 
 To start, go to the Azure Portal <https://portal.azure.com>.
 Next, the locate the `Virtual Machines` option and select it:
@@ -245,16 +242,18 @@ This will present you the configuration options needed to create a new virtual m
 
 ![@label](images/createavirtualmachine.png)
 
-To configure a machine, I chose the following options:
+To configure the virtual machine, choose the following options or modify to your situational needs.
+
 #### Subscription: 
 `Azure for Students` (default)
 
-Resource Group: `AndrewCloudSevicetest` (Create new one if you do not have an available option.)
+#### Resource Group: 
+`AndrewCloudSevicetest` (Create a new one if you do not have an available option.)
 
 #### Virtual Machine Name: 
 `EfiveothreeTest`
 
-##### Region: 
+#### Region: 
 `Central US` (default)
 
 #### Availability Options: 
@@ -274,18 +273,18 @@ The next configuration section is `Disks`:
 
 ![@label](images/disks.png)
 
-I chose all the default configurations settings except for `OS disk type`, 
-of which I selected the `Standard SSD` option.
+Choose the default configurations settings or modify to your liking the `OS disk type`. 
+This example uses the `Standard SSD` option.
 
-For `Networking` I chose all the default configuration settings:
+For `Networking` you can choose all the default configuration settings or modify to your liking:
 
 ![@label](images/networking.png)
 
-For `Management` I chose all the default configuration settings:
+For `Management` you can choose all the default configuration settings or modify to your liking:
 
 ![@label](images/management.png)
 
-Last, I created the virtual machine:
+Last, create the virtual machine:
 
 ![@label](images/createvmvalidation.png)
 
@@ -296,37 +295,39 @@ Once the new VM has been created, Naviagate back to the `Virtual machines` and n
 After creation the virtual machine will be in a `running` status. You will want to decide if you want your virtual machine in a `running` status, else stop the VM so that you do not waste resources. 
 
 ## Remote access the Virtual Machine 
-To access my virtual machine, I used Putty client< https://www.putty.org/>.
+To remote access a virtual machine, you can use a client application like Putty: <https://www.putty.org/>.
 
-To use Putty and access the virtual machine, I have configured a DNS name in Azure.
+To use Putty and access the virtual machine, you can configure DNS name in Azure instead of using an IP.
 This is performed in the Virtual Machine configuration under `DNS name`:
 
 ![@label](images/dns.png)
 
 Click `Configure`.
-I chose a `static` IP setting so that so that I will not have to look up a dynamic IP:
+You can chose a `static` IP setting or a `dynamic` IP (This example uses a static IP setting):
 
 ![@label](images/static.png)
 
-Then click `save`.
+To apply the setting,  click `save`.
 
-Note: If you have not configured the `port` that connection will occur, then connection will not be successful.
+Note: If you have not configured the `port` that connection will use, then connection will not be successful.
 
 In your Virtual machine settings click `Connect` and review the connection settings.
-I have designed `port 22` to be the port that will remote connect to the virtual machine:
+This example shows the designated `port 22` to be the port that will remote connect to the virtual machine:
 
 ![@label](images/conncetandport.png)
 
-Next, I launched the Putty client and enter in my DNS name of the virtual machine to connect to the machine:
+Next, lauch the Putty client and enter the DNS name of the virtual machine to connect to the virtaul machine:
 
 ![@label](images/putty.png)
 
 The first time the environment is accessed Putty, Putty will prompt to cache your servers host key. 
-I selected `Yes` when prompted:
+Selected `Yes` when prompted:
 
 ![@label](images/cacheputtykey.png)
 
-After the key is cached, next time you enter the Puttry client, you will be prompted to enter your server credentials as specified in the virtual machine setup.
+After the key is cached, it will be remember the next time you access the VM with the Putty client.
+After the VM is successfully accessed in Puty, you will be prompted to enter your server credentials 
+as specified in the virtual machine setup.
 
 Once credentials are provided, you will be logged into your virtual machine:
 
