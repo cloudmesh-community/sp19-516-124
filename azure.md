@@ -230,6 +230,7 @@ Source: <https://docs.microsoft.com/en-us/azure/virtual-machines/windows/media/q
 Here are the steps to create a Ubuntu Server 18.04 LTS Virtual Machine in Azure. 
 
 To start, go to the Azure Portal <https://portal.azure.com>.
+
 Next, the locate the `Virtual Machines` option and select it:
 
 ![@label](images/virtualmachines.png)
@@ -248,7 +249,7 @@ To configure the virtual machine, choose the following options or modify to your
 `Azure for Students` (default)
 
 #### Resource Group: 
-`AndrewCloudSevicetest` (Create a new one if you do not have an available option.)
+`YourResourceGroupHere` (Create a new one if you do not have an available option.)
 
 #### Virtual Machine Name: 
 `EfiveothreeTest`
@@ -292,13 +293,17 @@ Once the new VM has been created, Naviagate back to the `Virtual machines` and n
 
 ![@label](images/newvmaftercreation.png)
 
-After creation the virtual machine will be in a `running` status. You will want to decide if you want your virtual machine in a `running` status, else stop the VM so that you do not waste resources. 
+After creation the virtual machine will be in a `running` status. 
+You will want to decide if you want your virtual machine in a `running` status, 
+else stop the VM so that you do not waste resources. 
 
 ## Remote access the Virtual Machine 
-To remote access a virtual machine, you can use a client application like Putty: <https://www.putty.org/>.
+To remote access a virtual machine, you can use a client application like Putty: 
+<https://www.putty.org/>.
 
-To use Putty and access the virtual machine, you can configure DNS name in Azure instead of using an IP.
-This is performed in the Virtual Machine configuration under `DNS name`:
+To use Putty and access the virtual machine, you can configure DNS name in Azure 
+instead of using an IP. This is performed in the Virtual Machine configuration under 
+`DNS name`:
 
 ![@label](images/dns.png)
 
@@ -309,19 +314,25 @@ You can chose a `static` IP setting or a `dynamic` IP (This example uses a stati
 
 To apply the setting,  click `save`.
 
-Note: If you have not configured the `port` that connection will use, then connection will not be successful.
+Note: If you have not configured the `port` that connection will use, 
+then connection will not be successful.
 
 In your Virtual machine settings click `Connect` and review the connection settings.
 This example shows the designated `port 22` to be the port that will remote connect to the virtual machine:
 
 ![@label](images/conncetandport.png)
 
-Next, lauch the Putty client and enter the DNS name of the virtual machine to connect to the virtaul machine:
+To learn more about working with ports you can review the following: 
+<https://docs.microsoft.com/en-us/azure/virtual-machines/windows/nsg-quickstart-portal>
+
+Next, to connect to the virtual machine, lauch the Putty client and enter 
+the DNS name of the virtual machine to connect to the virtual machine:
 
 ![@label](images/putty.png)
 
-The first time the environment is accessed Putty, Putty will prompt to cache your servers host key. 
-Selected `Yes` when prompted:
+The first time the environment is accessed Putty, 
+Putty will prompt to cache your servers host key. 
+Select `Yes` when prompted:
 
 ![@label](images/cacheputtykey.png)
 
@@ -333,6 +344,8 @@ Once credentials are provided, you will be logged into your virtual machine:
 
 ![@label](images/loggedinviaputty.png)
 
+To learn more about connecting to Azure virtual machines you can visit: 
+<https://docs.microsoft.com/en-us/azure/virtual-machines/windows/connect-logon>
 
 ## Starting a VM
 
