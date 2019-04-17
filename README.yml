@@ -20,5 +20,5 @@ chapter:
   - title: Azure 
     url: https://github.com/cloudmesh-community/book/blob/master/chapters/iaas/azure/azure.md
 project:
-  - title: Azure VM Management Report (using Libcloud ASM\ARM\Azure CLI)
+  - title: Azure VM Management using Libcloud
     url: https://github.com/cloudmesh-community/sp19-516-124/tree/master/project-code
