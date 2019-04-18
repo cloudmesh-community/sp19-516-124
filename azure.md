@@ -231,17 +231,17 @@ Here are the steps to create a Ubuntu Server 18.04 LTS Virtual Machine in Azure.
 
 To start, go to the Azure Portal <https://portal.azure.com>.
 
-Next, the locate the `Virtual Machines` option and select it:
+Next, the locate the `Virtual Machines` option and select it:@fig:virtualmachines.
 
-![@label](images/virtualmachines.png)
+![virtualmachines](images/virtualmachines.png){#fig:virtualmachines}
 
-Then to create a new virtual machine, select `Add`:
+Then to create a new virtual machine, select `Add`:@fig:addvirtualmachines.
 
-![@label](images/addvirtualmachines.png)
+![addvirtualmachines](images/addvirtualmachines.png){#fig:addvirtualmachines}
 
-This will present you the configuration options needed to create a new virtual machine:
+This will present you the configuration options needed to create a new virtual machine:@fig:createavirtualmachine.
 
-![@label](images/createavirtualmachine.png)
+![createavirtualmachine](images/createavirtualmachine.png){#fig:createavirtualmachine}
 
 To configure the virtual machine, choose the following options or modify to your situational needs.
 
@@ -270,28 +270,28 @@ To configure the virtual machine, choose the following options or modify to your
 `password` (Choose a username and a password that meet the requirements).
 
 
-The next configuration section is `Disks`:
+The next configuration section is `Disks`:@fig:disks.
 
-![@label](images/disks.png)
+![disks](images/disks.png){#fig:disks}
 
 Choose the default configurations settings or modify to your liking the `OS disk type`. 
 This example uses the `Standard SSD` option.
 
-For `Networking` you can choose all the default configuration settings or modify to your liking:
+For `Networking` you can choose all the default configuration settings or modify to your liking:@fig:networking.
 
-![@label](images/networking.png)
+![networking](images/networking.png){#fig:networking}
 
-For `Management` you can choose all the default configuration settings or modify to your liking:
+For `Management` you can choose all the default configuration settings or modify to your liking:@fig:management.
 
-![@label](images/management.png)
+![management](images/management.png){#fig:management}
 
-Last, create the virtual machine:
+Last, create the virtual machine:@fig:createvmvalidation.
 
-![@label](images/createvmvalidation.png)
+![createvmvalidation](images/createvmvalidation.png){#fig:createvmvalidation}
 
-Once the new VM has been created, Naviagate back to the `Virtual machines` and now discover your Virtual Machine:
+Once the new VM has been created, Naviagate back to the `Virtual machines` and now discover your Virtual Machine:@fig:newvmaftercreation.
 
-![@label](images/newvmaftercreation.png)
+![newvmaftercreation](images/newvmaftercreation.png){#fig:newvmaftercreation}
 
 After creation the virtual machine will be in a `running` status. 
 You will want to decide if you want your virtual machine in a `running` status, 
@@ -303,14 +303,14 @@ To remote access a virtual machine, you can use a client application like Putty:
 
 To use Putty and access the virtual machine, you can configure DNS name in Azure 
 instead of using an IP. This is performed in the Virtual Machine configuration under 
-`DNS name`:
+`DNS name`:@fig:dns.
 
-![@label](images/dns.png)
+![dns](images/dns.png){#fig:dns}
 
 Click `Configure`.
-You can chose a `static` IP setting or a `dynamic` IP (This example uses a static IP setting):
+You can chose a `static` IP setting or a `dynamic` IP (This example uses a static IP setting):@fig:static.
 
-![@label](images/static.png)
+![static](images/static.png){#fig:static}
 
 To apply the setting,  click `save`.
 
@@ -318,31 +318,31 @@ Note: If you have not configured the `port` that connection will use,
 then connection will not be successful.
 
 In your Virtual machine settings click `Connect` and review the connection settings.
-This example shows the designated `port 22` to be the port that will remote connect to the virtual machine:
+This example shows the designated `port 22` to be the port that will remote connect to the virtual machine:@fig:connectandport.
 
-![@label](images/conncetandport.png)
+![connectandport](images/conncetandport.png){#fig:connectandport}
 
 To learn more about working with ports you can review the following: 
 <https://docs.microsoft.com/en-us/azure/virtual-machines/windows/nsg-quickstart-portal>
 
 Next, to connect to the virtual machine, lauch the Putty client and enter 
-the DNS name of the virtual machine to connect to the virtual machine:
+the DNS name of the virtual machine to connect to the virtual machine:@fig:putty.
 
-![@label](images/putty.png)
+![putty](images/putty.png){#fig:putty}
 
 The first time the environment is accessed Putty, 
 Putty will prompt to cache your servers host key. 
-Select `Yes` when prompted:
+Select `Yes` when prompted:@fig:cacheputtykey.
 
-![@label](images/cacheputtykey.png)
+![cacheputtykey](images/cacheputtykey.png){#fig:cacheputtykey}
 
 After the key is cached, it will be remember the next time you access the VM with the Putty client.
 After the VM is successfully accessed in Puty, you will be prompted to enter your server credentials 
 as specified in the virtual machine setup.
 
-Once credentials are provided, you will be logged into your virtual machine:
+Once credentials are provided, you will be logged into your virtual machine:@fig:loggedinviaputty.
 
-![@label](images/loggedinviaputty.png)
+![loggedinviaputty](images/loggedinviaputty.png){#fig:loggedinviaputty}
 
 To learn more about connecting to Azure virtual machines you can visit: 
 <https://docs.microsoft.com/en-us/azure/virtual-machines/windows/connect-logon>
@@ -356,7 +356,7 @@ types that minimize your charges.
 
 A VM can be started through the Portal as follows: @fig:start-button.
 
-* On the overview tqb, a VM can be started by clicking the `Start`
+* On the overview tab, a VM can be started by clicking the `Start`
   button.
 
 ![Start button](images/start-button.png){#fig:start-button}
