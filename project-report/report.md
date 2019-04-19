@@ -343,14 +343,20 @@ locate the new `e503CloudServicetest` cloud service in the Azure Portal under `A
 
 ## Apache Libcloud Azure ARM Compute Driver
 
-TBD
+Apache Libcloud is a Python library which hides differences between different cloud provider APIs 
+and allows you to manage different cloud resources through a unified and easy to use API. 
+For additional reference and/or more detail, you can read at:  
+<https://libcloud.readthedocs.io/en/latest/compute/drivers/azure_arm.html>. 
 
-Apache Libcloud is a Python library which hides differences between different cloud provider APIs and allows you to manage different cloud resources through a unified and easy to use API. For additional reference and/or more detail, you can read at https://libcloud.readthedocs.io/en/latest/compute/drivers/azure_arm.html. 
+The Azure driver allows you to integrate with Microsoft Azure Virtual Machines provider using the 
+Azure Resource Management (ARM) API. The Azure Virtual Machine service allows you to launch Windows 
+and Linux virtual servers in many datacenters across the world.
 
-The Azure driver allows you to integrate with Microsoft Azure Virtual Machines provider using the Azure Resource Management (ARM) API. Azure Virtual Machine service allows you to launch Windows and Linux virtual servers in many datacenters across the world. To connect to Azure you need your tenant ID and subscription ID.
+To connect to Azure you need your `Tenant ID` and `Subscription ID`.
 
 ### Creating a Service Principal
-The following directions are based on creating an azure Service Principal. This process can be performed using either Powershell or    through the Azure Portal. 
+The following directions are based on creating an azure Service Principal. 
+This process can be performed using either Powershell or through the Azure Portal. 
 
  * PowerShell Service Principal creation: 
    The following supporting information and steps are used to create an Azure Service Principal using Windows PowerShell:
@@ -362,17 +368,25 @@ The following directions are based on creating an azure Service Principal. This 
 
 Note: This process assumes that you have an active Azure Student Subscription.
 
-The following steps show you how to create a new Azure Active Directory application and service principal that can be used with the role-based access control. 
-When you have code that needs to access or modify resources, you can create an identity for the app. This identity is known as a service principal. 
+The following steps demonstrate creating a new Azure Active Directory application and service principal
+that can be used with the role-based access control. 
+When you have code that needs to access or modify resources, you can create an identity for the app. 
+This identity is known as a service principal. 
 You can then assign the required permissions to the service principal. 
 
 The follwoing steps will show you how to use the Azure Portal to create the service principal. 
-The steps outline a single-tenant application where the application is intended to run within only one organization. 
-You typically use single-tenant applications for line-of-business applications that run within your organization.
-This is modifiyed to suit my project and has been derived from the following steps: <https://docs.microsoft.com/en-us/azure/active-directory/develop/howto-create-service-principal-portal>
+
+The steps outline a single-tenant application where the application is intended to run within 
+only one organization. You typically use single-tenant applications for line-of-business applications 
+that run within your organization.
+
+This is modifiyed to suit my project and has been derived from the following steps: 
+<https://docs.microsoft.com/en-us/azure/active-directory/develop/howto-create-service-principal-portal>
 
 First connect to the Azure Portal and login: <https://portal.azure.com>
+
 Then select the Azure `Active Directory` option.
+
 Choose `App Registrations` in the under the `Manage` section:
 
 ![@label](images/appregistrations.png)
@@ -381,11 +395,13 @@ Next, select the `New application registration` option:
 
 ![@label](images/newappregistration.png)
 
-Provide a name and URL for the application. I made up a fake URL for my app. 
+Provide a name and URL for the application. 
 
-Next, select `Web app / API` for the type of application you want to create. 
+Select `Web app / API` for the type of application you want to create. 
+
 Note: You cannot create credentials for a Native application. 
-To read more about this you can access the following supporting information: <https://docs.microsoft.com/en-us/azure/active-directory/manage-apps/application-proxy-configure-native-client-application>.
+To read more about this you can access the following supporting information: 
+<https://docs.microsoft.com/en-us/azure/active-directory/manage-apps/application-proxy-configure-native-client-application>.
 
 After setting the values, select `Create` to create your Azure AD application and service principal.
 
@@ -397,18 +413,24 @@ The result of the app creation should resemble something close to the following:
 
 ### Assign the application to a role
 To access resources in your subscription, you must assign the application to a role.
-You can set the scope at the level of the subscription, resource group, or resource. Permissions are inherited to lower levels of scope. For example, adding an application to the Reader role for a resource group means it can read the resource group and any resources it contains.
+You can set the scope at the level of the subscription, resource group, or resource. 
+Permissions are inherited to lower levels of scope. 
+For example, adding an application to the Reader role for a resource group means it can read 
+the resource group and any resources it contains.
 
-Next select the `All services` option.
+Select the `All services` option.
+
 Under the `General` section chose `Subscriptions`:
 
 ![@label](images/subscriptions_two.png)
 
-Chose the Subscription to assign the Application ID to. For example, my Subscrition is `Azure for Students`: 
+Choose the Subscription to assign the Application ID to. 
+Example: `Azure for Students`: 
 
 ![@label](images/subscriptiondetail.png)
 
-If you do not see the Subscription  that you are looking for, select `global subscriptions` filter. 
+If you do not see the Subscription that you are looking for, 
+select `global subscriptions` filter. 
 Make sure the subscription you want is selected for the portal.
 
 Select the `Access control (IAM)` option. 
@@ -419,9 +441,11 @@ Choose the `Add a Role Assignment option`:
 
 ![@label](images/addroleassignment.png)
 
-To allow the application to execute actions like `reboot`, `start` and `stop` instances, select the `Contributor` role. 
+To allow the application to execute actions like `reboot`, `start` and `stop` instances, 
+select the `Contributor` role. 
 
-By default, Azure AD applications are not displayed in the available options. To find your application, search for the name and select it. 
+By default, Azure AD applications are not displayed in the available options. 
+To find your application, search for the name and select it. 
 
 Select `Save` to finish assigning the role. 
 You see your application in the list of users assigned to a role for that scope.
@@ -455,41 +479,64 @@ Do this by choosing the application `Settings` and locating `Keys`, then selecti
 
 ![@label](images/applicationsettingskey.png)
 
-Provide a description of the key, and a duration for the key. When done, select `Save`.
+Provide a description of the key, and a duration for the key. 
+When done, select `Save`.
+
 After saving the key, the value of the key is displayed. 
 
-Copy this value because you are not able to retrieve the key later. You provide the key value with the application ID to sign in as the application. Store the key value where your application can retrieve it.
+Copy this value because you are not able to retrieve the key later. 
+You provide the key value with the application ID to sign in as the application. 
+Store the key value where your application can retrieve it.
 
 ### Required permissions
-You must have sufficient permissions to register an application with your Azure AD tenant and assign the application to a role in your Azure subscription.
-To do so, first check your Azure Active Directory permissions
+You must have sufficient permissions to register an application with your Azure AD tenant and assign 
+the application to a role in your Azure subscription.
+
+To do so, first check your Azure Active Directory permissions.
 Select the `Azure Active Directory` option.
 Then select `User Settings` in the `Default Directory – Overview` section :
 
 ![@label](images/defaultdirectoryusersetting.png)
 
 Next, check the App registrations setting. 
-Note: This value can only be set by an administrator. If set to `Yes`, any user in the Azure AD tenant can register an app.
+
+Note: This value can only be set by an administrator. 
+If set to `Yes`, any user in the Azure AD tenant can register an app.
 
 ![@label](images/appregistrationyes.png)
 
-If the app registrations setting is set to `No`, only users with an administrator role may register these types of applications. 
+If the app registrations setting is set to `No`, 
+only users with an administrator role may register these types of applications. 
 
-See available roles <https://docs.microsoft.com/en-us/azure/active-directory/users-groups-roles/directory-assign-admin-roles#available-roles> and role permissions <https://docs.microsoft.com/en-us/azure/active-directory/users-groups-roles/directory-assign-admin-roles#role-permissions> to learn about available administrator roles and the specific permissions in Azure AD that are given to each role. 
+See available roles:
+<https://docs.microsoft.com/en-us/azure/active-directory/users-groups-roles/directory-assign-admin-roles#available-roles> 
+And and role permissions: <https://docs.microsoft.com/en-us/azure/active-directory/users-groups-roles/directory-assign-admin-roles#role-permissions>.
 
-If your account is assigned to the `User` role, but the app registration setting is limited to admin users, you will need an administrator to either assign you to one of the `administrator` roles that can create and manage all aspects of app registrations, or to enable users to register apps.
+To learn about available administrator roles and the specific permissions in Azure AD that 
+are given to each role. 
+
+If your account is assigned to the `User` role, 
+but the app registration setting is limited to admin users, 
+you will need an administrator to either assign you to one of the `administrator` roles 
+that can create and manage all aspects of app registrations, or to enable users to register apps.
 
 ### Check Azure subscription permissions
-In your Azure subscription, your account must have `Microsoft.Authorization/*/Write` access to assign an AD app to a role. This action is granted through the Owner role or User Access Administrator role. 
+In your Azure subscription, your account must have `Microsoft.Authorization/*/Write` 
+access to assign an AD app to a role. 
 
-If your account is assigned to the `Contributor` role, you do not have adequate permission. You will receive an error when attempting to assign the service principal to a role.
+This action is granted through the Owner role or User Access Administrator role. 
+
+If your account is assigned to the `Contributor` role, you do not have adequate permission. 
+You will receive an error when attempting to assign the service principal to a role.
 
 To check your subscription permissions:
-Select the `All services` option under the `General` section, Then choose `Subscriptions`:
+Select the `All services` option under the `General` section, 
+Then choose `Subscriptions`:
 
 ![@label](images/subscriptionsthree.png)
 
-Choose the Subscription to assign the Application ID to. For example, my Subscription is `Azure for Students`:
+Choose the Subscription to assign the Application ID to. 
+Example: `Azure for Students`:
 
 ![@label](images/azureforstudents.png)
 
@@ -500,23 +547,31 @@ Under the `Azure for Students` section, locate the `My Permissions` option:
 This will show your account permission. For Example:
 ![@label](images/resourceproviderstatus.png)
 
-View your assigned roles and determine if you have adequate permissions to assign an AD app to a role. 
-If not, an administrator will need to add you to the `User Access Administrator` role. In the following image, the user is assigned to the `User Access Administrator` role, which means that user has adequate permissions.
+View your assigned roles and determine if you have adequate permissions to assign 
+an AD app to a role. 
+
+If not, an administrator will need to add you to the `User Access Administrator` role. 
+In the following image, the user is assigned to the `User Access Administrator` role,
+which means that user has adequate permissions.
 
 ### Instantiating an Libcloud Azure ARM Compute Driver 
+
 Use `<Application_Id>` for “key” and the `<Your_Password>` for “secret”.
 
-
-Once you have the `tenant id`, `subscription id`, `application id (“key”)`, and `password (“secret”)`, you can create an AzureNodeDriver:
+Once you have the `tenant id`, `subscription id`, `application id (“key”)`, 
+and `password (“secret”)`, you can create an AzureNodeDriver:
 
 ![@label](images/instantiatearmdriverdetail.png)
 
-To interact with my Azure VMs, I have chosen the method to start a VM that is currently in a stopped state. 
+To interact with Azure VMs, You can pick from the available ARM methods.
+For example, start a VM that is currently in a stopped state.
+
 This would be accomplished with the `ex_start_node` method listed in the ARM driver documentation :
 
 ![@label](images/exstartnode.png)
 
-This is the Python code that I generated in order to test this method (Note: at the time of this writing this command did not return successfully)
+This is the Python code that was generated in order to test this method:
+(Note: at the time of this writing this command did not return successfully)
 
 ```
 from libcloud.compute.types import Provider
