@@ -307,8 +307,9 @@ To do so, choose a Python IDE.
 This example was generating using Pycharm Edu.   
 
 Following the `Azure ASM Compute Driver Documentation` at 
-<https://libcloud.readthedocs.io/en/latest/compute/drivers/azure.html>, 
-assuming a certificate file and subscriptionID have been provisioned, 
+<https://libcloud.readthedocs.io/en/latest/compute/drivers/azure.html>.
+
+Assuming a certificate file and subscriptionID have been provisioned, 
 instantiate the driver as follows:
 
 ```
