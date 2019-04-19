@@ -12,15 +12,12 @@ section:
     url: https://github.com/cloudmesh-community/book/blob/master/chapters/iaas/gcloud/gcloud.md
   - title: Open Lambda
     url: https://github.com/cloudmesh-community/book/blob/master/chapters/faas/openlambda.md
-  - title: Spelling Correction
-    url: https://github.com/cloudmesh-community/book/pull/332#pullrequestreview-199359120
-  - title: Addition of mainframe detail for the book.
+  - title: MainFrame Detail.
     url: https://github.com/cloudmesh-community/book/pull/338#pullrequestreview-199402192
 chapter:
   - title: Azure 
     url: https://github.com/cloudmesh-community/book/blob/master/chapters/iaas/azure/azure.md
 project:
   - title: Azure VM Management using Libcloud
-    url: https://github.com/cloudmesh-community/sp19-516-124/tree/master/project-code
-    pytest:
-      - TBD
+    url: https://github.com/cloudmesh-community/sp19-516-124/blob/master/project-code/readme.md
+
