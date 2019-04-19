@@ -224,7 +224,7 @@ For additional reference and/or more detail, you can read at
 <https://libcloud.readthedocs.io/en/latest/index.html>. 
 
 The Azure ASM Compute Driver allows you to integrate with Microsoft Azure Virtual Machines service 
-using the Azure Service Management (ASM) API. This is the `Classic” API`, 
+using the Azure Service Management (ASM) API. This is the `"Classic” API`, 
 please note that it is incompatible with the newer Azure Resource Management (ARM) API, 
 which is provided by the Azure ARM driver.
 
