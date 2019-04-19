@@ -700,12 +700,59 @@ To search for commands, use az find. For example, to search for command names co
 use the following command: 
 `az find secret`:
 
-![@label](images/azfindsecret.png)
+```
+C:\WINDOWS\system32>az find secret
+I'm an AI bot (learn more: aka.ms/aladdinkb); Let me see how I can help you...
+
+Here are the most common ways to use [secret]:
+
+Get secret.
+az lab secret show      --lab-name
+                --name -n
+                --resource-group -g
+                --expand
+                --subscription
+Delete secret.
+az lab secret delete    --lab-name
+                --name -n
+                --resource-group -g
+                --subscription
+Delete a secret.
+az mesh secret delete   --name -n
+                --resource-group -g
+                --yes -y
+
+C:\WINDOWS\system32>
+```
 
 Use the `—help` argument to get a complete list of commands and subgroups of a group. 
 For example, to find the CLI commands for working with Network Security Groups (NSGs):
+`az network ndg --help` :
 
-![@label](images/aznetworknsg.png)
+```
+C:\WINDOWS\system32>az network nsg --help
+
+Group
+    az network nsg : Manage Azure Network Security Groups (NSGs).
+        You can control network traffic to resources in a virtual network using a network security
+        group. A network security group contains a list of security rules that allow or deny inbound
+        or outbound network traffic based on source or destination IP addresses, Application
+        Security Groups, ports, and protocols. For more information visit
+        https://docs.microsoft.com/en-us/azure/virtual-network/virtual-networks-create-nsg-arm-cli.
+
+Subgroups:
+    rule   : Manage network security group rules.
+
+Commands:
+    create : Create a network security group.
+    delete : Delete a network security group.
+    list   : List network security groups.
+    show   : Get information about a network security group.
+    update : Update a network security group.
+
+
+C:\WINDOWS\system32>
+```
 
 The CLI has full tab completion for commands under the bash shell.
 
