@@ -623,9 +623,8 @@ you can reference the following steps to interact with an Azure environment with
 <https://docs.microsoft.com/en-us/cli/azure/get-started-with-azure-cli?view=azure-cli-latest>.
 
 ### Sign in
-Before using any CLI commands with a local install, you need to sign in with az login.
-
-![@label](images/azlogin.png)
+Before using any CLI commands with a local install, you need to sign in with the command:
+`az login`.
 
 You may be directed and prompted to provide your credentials through a web browser if you are not 
 currently actively logged in already. Once your credentials have been provided successfully, 
