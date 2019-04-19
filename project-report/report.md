@@ -243,13 +243,19 @@ $  openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout azure_cert.pem -o
 $  openssl x509 -inform pem -in azure_cert.pem -outform der -out azure_cert.cer
 ```
 
-Since I am using Windows 10 to work with the ASM Compute Driver in PyCharm,
-I used the WINSCP application to connect to my Linux machine so that I can copy the "azure_cert.pem" 
-certificate that was generated in my Linux `/home` directory to any location of my choosing on my Windows 10 machines file system. An example would be `C:\Users\Andrew.garbe\Downloads\2019 Spring Data Science\Project\azure_cert.pem`.
+This example demonstrates the use of a Windows 10 machine to work with the ASM Compute Driver 
+in the PyCharm IDE.
+
+To move files between the Azure Linux virtual machine and the local Windows 10 machine, 
+you can use an application like WINSCP: <https://winscp.net/eng/index.php>. 
+Move the "azure_cert.pem" file to a place that you want to access it when working with the 
+ASM Driver in Python. For example, in the Linux virtual machines `/home` directory, 
+locate the `azure_cert.pem` file, and download it to:  
+`C:\Users\AUser\AnotherLocation\Project\azure_cert.pem`.
 
 Certificates are used in Azure for cloud services service certificates and for authenticating with 
-the management API management certificates.
-A certificate overview for Azure Cloud Service can be referenced at: 
+the management API management certificates. A certificate overview for Azure Cloud Service can be 
+referenced at: 
 <https://docs.microsoft.com/en-us/azure/cloud-services/cloud-services-certs-create>.
 
 Once you have an available certificate, you will then need to upload the certificate to Azure. 
@@ -278,12 +284,12 @@ In the `Azure for Students` options, select
 
 ![@label](images/managementcertificates.png)
 
-Next, select `Upload` to upload your certificate: 
+Next, select `Upload` to upload the certificate: 
 
 ![@label](images/upload.png)
 
 Choose a subscription and provide the path to the .Cer Certifcate file, 
-then select `Upload` to associate the certificate with your subscription:
+then select `Upload` to associate the certificate with the subscription:
 
 ![@label](images/uploadcertificates.png)
 
@@ -294,14 +300,15 @@ Once uploaded, the certificate will show up in the `Azure for Students – Manag
 Take note of the `SubscriptionID` associated with the certificate as this will be need to be 
 referenced when instantiating the Libcloud Azure ASM Compute Driver.
 
-Once a certificate hsa been created and configured within Azure, 
-you can use the `Subscription ID` and `certificate file` to interact with the Libcloud ASM Driver. 
-To do so, you will need to open a Python IDE. 
+Once a certificate has been created and configured within Azure, 
+use the `Subscription ID` and `certificate file` to interact with the Libcloud ASM Driver. 
+To do so, choose a Python IDE. 
+
 This example was generating using Pycharm Edu.   
 
 Following the `Azure ASM Compute Driver Documentation` at 
 <https://libcloud.readthedocs.io/en/latest/compute/drivers/azure.html>, 
-once you have generated the certificate file and obtained a subscriptionID, 
+assuming a certificate file and subscriptionID have been provisioned, 
 instantiate the driver as follows:
 
 ```
@@ -319,7 +326,8 @@ An example of a Libcloud ASM Driver integration to create a new Azure cloud serv
 
 ![@label](images/excloundcreateservice.png)
 
-An example of Python code example to create an Azure cloud service named “e503CloudServicetest” would look like this:
+An example of Python code example to create an Azure cloud service named “e503CloudServicetest” 
+would look like this:
 
 ```
 #ex_create_cloud_service(name, location, description=None, extended_properties=None)
@@ -330,7 +338,6 @@ Once the `ex_create_cloud_service` Python code has been executed,
 locate the new `e503CloudServicetest` cloud service in the Azure Portal under `All resources`:   
 
 ![@label](images/e503cloudservicetest.png)
-
 
 
 ## Apache Libcloud Azure ARM Compute Driver
