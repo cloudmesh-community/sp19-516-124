@@ -1,7 +1,3 @@
-# To-do
-  
+
   All projects are developed under an open source license, such as the Apache 2.0 License.
-  You will be required to add a LICENCE.txt file and describe how other software, if used, 
-  can be reused in your project.
-  If your project uses different licenses, 
-  please add a README.md file that describes which packages are used and what licenses these packages have.
+
