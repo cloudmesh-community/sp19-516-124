@@ -29,7 +29,7 @@ library as well as the Microsoft CLI interface. To accomplish this goal a Micrso
 will need to be configured and administrated in order to use the Apache Libcloud Python library and Azure CLI Interaface. 
 This report will take you through the steps to configure the Azure enviroment as well as touching on 
 the Apache Libcloud Python ASM and ARM libraries and Azure CLI Interaface. 
-Last you will find a follow up of observations and challenges encountered though the project progress and process.
+Last, you will find a follow up of observations and challenges encountered though the project and process.
 
 ## Requirements
 
@@ -175,9 +175,46 @@ After the key is cached, next time you enter the Puttry client, you will be prom
 server credentials (username\password) as specified in the virtual machine setup.
 
 Once credentials are provided successfully, you will be logged into your virtual machine:
+The following is an example of what you would expect to see logging into the terminal:
 
-![@label](images/loggedinviaputty.png)
+```
+login as: <Username>
+<machinename>.centralus.cloudapp.azure.com's password:
+Welcome to Ubuntu 18.04.2 LTS (GNU/Linux 4.18.0-1014-azure x86_64)
 
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/advantage
+
+  System information as of Fri Apr 19 13:32:51 UTC 2019
+
+  System load:  0.8               Processes:           114
+  Usage of /:   4.4% of 28.90GB   Users logged in:     0
+  Memory usage: 57%               IP address for eth0: <MachineIP>
+  Swap usage:   0%
+
+ * Ubuntu's Kubernetes 1.14 distributions can bypass Docker and use containerd
+   directly, see https://bit.ly/ubuntu-containerd or try it now with
+
+     snap install microk8s --classic
+
+  Get cloud support with Ubuntu Advantage Cloud Guest:
+    http://www.ubuntu.com/business/services/cloud
+
+ * Canonical Livepatch is available for installation.
+   - Reduce system reboots and improve kernel security. Activate at:
+     https://ubuntu.com/livepatch
+
+30 packages can be updated.
+0 updates are security updates.
+
+
+Last login: Fri Apr 19 01:38:54 2019 from <IPAddress>
+To run a command as administrator (user "root"), use "sudo <command>".
+See "man sudo_root" for details.
+
+<MachineName>:~$
+```
  
 ## Apache Libcloud Azure ASM Compute Driver
 
