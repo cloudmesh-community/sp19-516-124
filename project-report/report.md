@@ -161,7 +161,7 @@ Specify the port for example: `port 22`, that remote connection will be provisio
 
 ![@label](images/conncetandport.png)
 
-To test connection to the virtaul machince, launch the Putty client application and enter 
+To test connection to the virtual machine, launch the Putty client application and enter 
 in the IP or the DNS name of the virtual machine:
 
 ![@label](images/putty.png)
