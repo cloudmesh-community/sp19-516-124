@@ -510,7 +510,9 @@ only users with an administrator role may register these types of applications.
 
 See available roles:
 <https://docs.microsoft.com/en-us/azure/active-directory/users-groups-roles/directory-assign-admin-roles#available-roles> 
-And and role permissions: <https://docs.microsoft.com/en-us/azure/active-directory/users-groups-roles/directory-assign-admin-roles#role-permissions>.
+
+And and role permissions: 
+<https://docs.microsoft.com/en-us/azure/active-directory/users-groups-roles/directory-assign-admin-roles#role-permissions>.
 
 To learn about available administrator roles and the specific permissions in Azure AD that 
 are given to each role. 
