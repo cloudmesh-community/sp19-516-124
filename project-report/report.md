@@ -1,11 +1,5 @@
 # Azure VM Management
 
-:o: you must not use the word I
-
-:o: if time allows switch images to light background. HOwever focus on project first
-
-:o: the terminal outputs you have should not be done as images, but pasted and copied ASCII text
-
 | Andrew Garbe
 | agarbe@iu.edu
 | Indiana University
