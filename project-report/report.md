@@ -137,8 +137,8 @@ and the Virtual Machine will be available for interaction:
 After the creation of the virtual machine will be in a `running` status. 
 Decide if you want your virtual machine in a `running` status, else stop the VM so that resources are not wasted. 
 
-### Remote access the Virtual Machine 
-To remote connect to a virtual machine, you can use a client application such as Putty:< https://www.putty.org/>.
+### Remote Access to the Virtual Machine 
+To remote connect to a virtual machine, you can use a client application such as Putty:<https://www.putty.org/>.
 
 To use Putty and access the virtual machine, you can use the virtual machine IP
 or configure a DNS name in Azure.
