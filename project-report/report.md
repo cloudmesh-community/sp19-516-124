@@ -24,7 +24,12 @@ that make managing the Azure environment scalable and efficient.
 
 ## Introduction
 
-The goal of this project is to interface with an Azure Virtual Machine using the Apache Libcloud Python library as well as the Microsoft CLI interface. To accomplish this goal a Micrsoft Azure environment will need to be configured and administrated in order to use the Apache Libcloud Python library and Azure CLI Interaface. This report will take you through the steps to configure the Azure enviroment as well as touching on the Apache Libcloud Python ASM and ARM libraries and Azure CLI Interaface. Last I will outline findings and challenges encountered thought this process.
+The goal of this project is to interface with an Azure Virtual Machine using the Apache Libcloud Python 
+library as well as the Microsoft CLI interface. To accomplish this goal a Micrsoft Azure environment 
+will need to be configured and administrated in order to use the Apache Libcloud Python library and Azure CLI Interaface. 
+This report will take you through the steps to configure the Azure enviroment as well as touching on 
+the Apache Libcloud Python ASM and ARM libraries and Azure CLI Interaface. 
+Last you will find a follow up of observations and challenges encountered though the project progress and process.
 
 ## Requirements
 
@@ -34,118 +39,147 @@ The goal of this project is to interface with an Azure Virtual Machine using the
 * Microsoft Azure Student Subscription
 
 ### Setup - Student Azure Portal
-To start working in the Azure environment, you will to first need to set up an Azure Student Account. 
-You can set up and activate an Azure student account at <https://azure.microsoft.com/en-us/free/students/>. 
+To start working in the Azure environment, 
+you will to first need to set up an Azure Student Account. 
+You can set up and activate an Azure student account at: <https://azure.microsoft.com/en-us/free/students/>. 
 
-When you sign up for an Azure free account, you get a Free Trial subscription, which provides you $200 in Azure credits for 30 days and 12 months of free services. At the end of 30 days, Azure disables your subscription. Your subscription is disabled to protect you from accidentally incurring charges for usage beyond the credit and free services included with your subscription. To continue using Azure services, you must upgrade your subscription to a Pay-As-You-Go subscription. After you upgrade, your subscription still has access to free services for 12 months. You only get charged for usage beyond the free services and quantities.
+When you sign up for an Azure free account, you ontain a `Free Trial` subscription, 
+which provides you $200 in Azure credits for 30 days and 12 months of free services. 
+At the end of 12 months and 30 days, Azure disables your subscription. 
+Your subscription is disabled to protect you from accidentally incurring charges for 
+usage beyond the credit and free services included with your subscription. 
+To continue using Azure services, 
+you must upgrade your subscription to a `Pay-As-You-Go` subscription. 
+After you upgrade, your subscription still has access to free services for 12 months. 
+You only get charged for usage beyond the free services and quantities.
 
 The Azure Student Account requires that you to activate the account after 30 days of use. 
-If you do not activate, you will loose access to your Azure Student Account and can not use the services.
+If you do not activate, 
+you will lose access to your Azure Student Account and can not use the services.
 
-The Azure student account FAQ will likely answer questions you might have pertaining to an Azure Student Account, what you will have access to, how long you will enjoy access, and additional general overview information including terms of the account. <https://azure.microsoft.com/en-us/free/free-account-students-faq/>
+The Azure Student Account FAQ will likely answer questions you might have pertaining 
+to an Azure Student Account, what you will have access to, how long you will enjoy access, 
+as well as additional general overview information including terms of the account. 
+<https://azure.microsoft.com/en-us/free/free-account-students-faq/>
 
-Once you have set up the Azure Student account, you will gain access the Azure environment through the Azure Portal <https://portal.azure.com>. To log in, please use the credentials you determined during the set up.
+Once you have set up the Azure Student account, you will gain access the Azure environment 
+through the Azure Portal <https://portal.azure.com>. 
+To log in, please use the credentials you determined during the set up.
 
 ### Create a Ubuntu Server 18.04 LTS Virtual Machine in Azure
 
-TBD
-In an effort to interact with an Azure Virtual Machine using Apache LibCloud, Azure SDK and/or Azure CLI, I have created a virtual machine for interaction. Here are the steps that I performed to create a Linux Ubuntu Server. 
+In an effort to interact with an Azure Virtual Machine using Apache LibCloud, 
+Azure SDK and/or Azure CLI, I have created a virtual machine for interaction. 
+Here are the steps that I performed to create a Linux Ubuntu Server. 
 
-To start, go to the Azure Portal <https://portal.azure.com>.
+To start, go to the Azure Portal: <https://portal.azure.com>.
 Next, the locate the `Virtual Machines` option and select it:
 
 ![@label](images/virtualmachines.png)
 
-Then to create a new virtual machine, select `Add`:
+Then create a new virtual machine by selecting `Add`:
 
 ![@label](images/addvirtualmachines.png)
 
-This will present you the configuration options needed to create a new virtual machine:
+This will present the configuration options needed to create a new virtual machine:
 
 ![@label](images/createavirtualmachine.png)
 
-To configure a machine, I chose the following options:
-Subscription: “Azure for Students” (default)
+To configure a machine, choose from the following options:
+#### Subscription: 
+`Azure for Students` (default or chose from another available option.)
 
-Resource Group: `AndrewCloudSevicetest` (Create new one if you do not have an available option.)
+#### Resource Group: 
+`CloudSevicetest` (Create new one if you do not have an available option.)
 
-Virtual Machine Name: `EfiveothreeTest`
+#### Virtual Machine Name: 
+`virtualmachineName`
 
-Region: `Central US` (default)
+#### Region: 
+`Central US` (default)
 
-Availability Options: `No infrastructure redundancy required` (default)
+#### Availability Options: 
+`No infrastructure redundancy required` (default)
 
-Image: `Ubuntu Server 18.04 LTS`
+#### Image: 
+`Ubuntu Server 18.04 LTS`
 
-Size: `Standard D2s v3, 2 vcpus, 8GB memory`
+#### Size: 
+`Standard D2s v3, 2 vcpus, 8GB memory`
 
-Authentication type: `password` (Choose a username and a password that meet the requirements).
+#### Authentication type: 
+`password` (Choose a username and a password that meet the requirements or use SSH).
 
-The next configuration section is `Disks`:
+The configuration process has several available sections, the next section is `Disks`:
 
 ![@label](images/disks.png)
 
-I chose all the default configurations settings except for `OS disk type`, of which I selected the `Standard SSD` option.
+Choose the default or settings that match your needs. 
+For the `OS disk type`, choose `Standard SSD` option.
 
-For `Networking` I chose all the default configuration settings:
+For `Networking` choose the default configuration settings unless you would like to customize:
 
 ![@label](images/networking.png)
 
-For `Management` I chose all the default configuration settings:
+For `Management` choose the default configuration settings unless you would like to customize:
 
 ![@label](images/management.png)
 
-Last, I created the virtual machine:
+Last, create the virtual machine:
 
 ![@label](images/createvmvalidation.png)
 
-Once the new VM has been created, Naviagate back to the `Virtual machines` and now discover your Virtual Machine:
+Once the new VM has been created, Naviagate back to the `Virtual machines` in the Azure Portal
+and the Virtual Machine will be available for interaction:
 
 ![@label](images/newvmaftercreation.png)
 
-After creation the virtual machine will be in a `running` status. You will want to decide if you want your virtual machine in a `running` status, else stop the VM so that you do not waste resources. 
+After the creation of the virtual machine will be in a `running` status. 
+Decide if you want your virtual machine in a `running` status, else stop the VM so that resources are not wasted. 
 
 ### Remote access the Virtual Machine 
-To access my virtual machine, I used Putty client< https://www.putty.org/>.
+To remote connect to a virtual machine, you can use a client application such as Putty:< https://www.putty.org/>.
 
-To use Putty and access the virtual machine, I have configured a DNS name in Azure.
+To use Putty and access the virtual machine, you can use the virtual machine IP
+or configure a DNS name in Azure.
 This is performed in the Virtual Machine configuration under `DNS name`:
 
 ![@label](images/dns.png)
 
 Click `Configure`.
-I chose a `static` IP setting so that so that I will not have to look up a dynamic IP:
+Choose a `static` IP unless you do not mind the IP changing:
 
 ![@label](images/static.png)
 
 Then click `save`.
 
-Note: If you have not configured the `port` that connection will occur, then connection will not be successful.
+Note: If you have not configured the `port` that virtaul machine connection will occur, 
+then connection will not be successful.
 
-In your Virtual machine settings click `Connect` and review the connection settings.
-I have designed `port 22` to be the port that will remote connect to the virtual machine:
+In the Virtual machine settings click `Connect` and review the connection settings.
+Specify the port for example: `port 22`, that remote connection will be provisioned for:
 
 ![@label](images/conncetandport.png)
 
-Next, I launched the Putty client and enter in my DNS name of the virtual machine to connect to the machine:
+To test connection to the virtaul machince, launch the Putty client application and enter 
+in the IP or the DNS name of the virtual machine:
 
 ![@label](images/putty.png)
 
 The first time the environment is accessed Putty, Putty will prompt to cache your servers host key. 
-I selected `Yes` when prompted:
+Select `Yes` when prompted:
 
 ![@label](images/cacheputtykey.png)
 
-After the key is cached, next time you enter the Puttry client, you will be prompted to enter your server credentials as specified in the virtual machine setup.
+After the key is cached, next time you enter the Puttry client, you will be prompted to enter the 
+server credentials (username\password) as specified in the virtual machine setup.
 
-Once credentials are provided, you will be logged into your virtual machine:
+Once credentials are provided successfully, you will be logged into your virtual machine:
 
 ![@label](images/loggedinviaputty.png)
 
  
 ## Apache Libcloud Azure ASM Compute Driver
-
-TBD
 
 Apache Libcloud is a Python library which hides differences between different cloud provider APIs and allows you to manage different cloud resources through a unified and easy to use API. For additional reference and/or more detail, you can read at <https://libcloud.readthedocs.io/en/latest/index.html>. 
 The Azure ASM Compute Driver allows you to integrate with Microsoft Azure Virtual Machines service using the Azure Service Management (ASM) API. This is the “Classic” API, please note that it is incompatible with the newer Azure Resource Management (ARM) API, which is provided by the azure arm driver.
