@@ -13,7 +13,7 @@ section:
   - title: Open Lambda
     url: https://github.com/cloudmesh-community/book/blob/master/chapters/faas/openlambda.md
   - title: MainFrame Detail.
-    url: https://github.com/cloudmesh-community/book/pull/338#pullrequestreview-199402192
+    url: https://github.com/cloudmesh-community/book/blob/master/chapters/arch.md
 chapter:
   - title: Azure 
     url: https://github.com/cloudmesh-community/book/blob/master/chapters/iaas/azure/azure.md
