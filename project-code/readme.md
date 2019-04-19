@@ -7,7 +7,7 @@
 | github: [:cloud:](https://github.com/cloudmesh-community/sp19-516-124/edit/master/project-report/report.md)
 
 ## Project Detail
-The goal of this project is to document and repert on my experience interfacing with an Azure Virtual Machine 
+The goal of this project is to document and report on my experience interfacing with an Azure Virtual Machine 
 using the Apache Libcloud Python library as well as the Microsoft CLI interface. The sole project is the report.
 
 |  | Links |
