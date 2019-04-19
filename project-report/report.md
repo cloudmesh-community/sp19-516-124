@@ -16,17 +16,22 @@
 
 Microsoft Azure is one of the leading cloud computing provides on the market today. 
 With government, business and other organizations that have chosen this cloud computing technology, 
-it would be unreasonable to think that any large-scale environment would be solely managed through the Azure portal GUI interface. 
+it would be unreasonable to think that any large-scale environment would be solely managed through 
+the Azure portal GUI interface. 
 
-The solution to effectively managing an Azure environment would occur through integration with technologies that make managing the Azure environment scalable and efficient.
+The solution to effectively managing an Azure environment would occur through integration with technologies 
+that make managing the Azure environment scalable and efficient.
 
 ## Introduction
 
-TBD
+The goal of this project is to interface with an Azure Virtual Machine using the Apache Libcloud Python library as well as the Microsoft CLI interface. To accomplish this goal a Micrsoft Azure environment will need to be configured and administrated in order to use the Apache Libcloud Python library and Azure CLI Interaface. This report will take you through the steps to configure the Azure enviroment as well as touching on the Apache Libcloud Python ASM and ARM libraries and Azure CLI Interaface. Last I will outline findings and challenges encountered thought this process.
 
 ## Requirements
 
-TBD
+* A computer where you have administrative rights to install applications.
+* Python installed. (Version 3.7.2 at the time of this writing)
+* Python IDE such as PyCharm
+* Microsoft Azure Student Subscription
 
 ### Setup - Student Azure Portal
 To start working in the Azure environment, you will to first need to set up an Azure Student Account. 
