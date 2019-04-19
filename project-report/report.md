@@ -781,9 +781,31 @@ If you find a bug, provide output generated with the --debug flag on when submit
 The CLI offers an interactive mode that automatically displays help information and makes it easier 
 to select subcommands. You enter interactive mode with the az interactive command `az interactive`:
 
-![@label](images/azinteractive.png)
+```
+C:\WINDOWS\system32>az interactive
+az>> C:\Users\Andrew.garbe\.azure\cliextensions\interactive\azext_interactive\azclishell\_dump_commands.py:136: YAMLLoadWarning: calling yaml.load() without Loader=... is deprecated, as the default Loader is unsafe. Please read https://msg.pyyaml.org/load for full details.
+  help_entry = yaml.load(help_yaml)
 
-For more information on interactive mode, see Azure CLI Interactive Mode: 
+
+
+-----------------------------------------------------------------------------------------
+                                            *
+-----------------------------------------------------------------------------------------
+
+-----------------------------------------------------------------------------------------
+#[cmd]                      : use commands outside the application
+[cmd] + [param] +"??[query]": Inject jmespath query from previous command
+"??[query]"                 : Jmespath query of the previous command
+[cmd] :: [num]              : do a step by step tutorial of example
+$                           : get the exit code of the previous command
+%%[cmd]                     : set a scope, and scopes can be chained with spaces
+%% ..                       : go back a scope
+
+oading...                                                         Hit [enter] to refresh
+```
+
+For more information on interactive mode, 
+see Azure CLI Interactive Mode: 
 <https://docs.microsoft.com/en-us/cli/azure/interactive-azure-cli?view=azure-cli-latest?>
 
 #### Learn CLI basics with quickstarts and tutorials
@@ -805,8 +827,22 @@ There are also quickstarts for other popular services.
 
 ## Conclusion
 
-TBD
+With the stated goal of this project being to interface with an Azure Virtual Machine 
+using the Apache Libcloud Python library as well as the Microsoft CLI interface, 
+there has been succees and challenges.
 
-## Acknowledgement
+As Illustrated above, a Microsoft Azure environment has been successfully provisioned 
+to admnistrator in order to interface with the Apache Libcloud ASM Driver and Azure CLI interface.
 
-TBD
+This process alone was a considerable effort and project to accomplish into a series of repeatable steps 
+as outlined in this writing.
+
+Unforseen challenges encountered in this project were:
+* Inconsistent functionablity with the Libcloud ASM and ARM drivers preventing expected behavior.
+* Limited documentation and examples to interact with the Libcloud ASM and ARM drivers.
+
+The Microsoft Azure CLI was the easiest and best documented interface between all 3 choices that I reviewed.
+
+In conclusion this was a challenging and rewarding project with minor successful outcome.
+
+
