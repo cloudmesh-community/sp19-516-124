@@ -71,3 +71,13 @@
 # Week 03/25/2019-03/31/2019:
   * Section: FaaS - Openlamda section completed.
   * Project: libcloud ARM testing methods with my Azure instances. Succcessful work using Azure CLI interacting with my Azure environment.
+  
+ # Week 04/01/2019-04/07/2019:
+   * Project: libcloud ARM testing methods with my Azure instances. Succcessful work using Azure CLI interacting with my Azure environment.
+   
+ # Week 04/08/2019-04/14/2019:
+   * Project: Gregor and I discussed changing my project to be a report of lal the work I have performed woking with Azure. Start with the Project report.
+   
+  # Week 04/15/2019-4/20/2019:
+  * Chapter: Azure VM Management.
+  * Project: Completed report.
