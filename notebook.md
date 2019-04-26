@@ -78,6 +78,10 @@
  # Week 04/08/2019-04/14/2019:
    * Project: Gregor and I discussed changing my project to be a report of lal the work I have performed woking with Azure. Start with the Project report.
    
-  # Week 04/15/2019-4/20/2019:
+ # Week 04/15/2019-4/20/2019:
   * Chapter: Azure VM Management.
   * Project: Completed report.
+  
+ # Week 04/21/2019-4/26/2019:
+  * Other: Make spelling corretions to book and other coninued review of Piazza and material.
+
