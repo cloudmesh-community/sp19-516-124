@@ -4,9 +4,7 @@
  
 # https://github.com/cloudmesh/cloudmesh-cloud/tree/master/cloudmesh/compute/azure
 
-#I propose to rename this provider to 
-
-NativeProvider.py
+#I propose to rename this provider to : NativeProvider.py
 
 # to distinguish it from
 
