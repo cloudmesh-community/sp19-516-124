@@ -20,15 +20,15 @@ that make managing the Azure environment scalable and efficient.
 
 The goal of this project is to interface with an Azure Virtual Machine using the Apache Libcloud Python 
 library as well as the Microsoft CLI interface. To accomplish this goal a Micrsoft Azure environment 
-will need to be configured and administrated in order to use the Apache Libcloud Python library and Azure CLI Interaface. 
-This report will take you through the steps to configure the Azure enviroment as well as touching on 
-the Apache Libcloud Python ASM and ARM libraries and Azure CLI Interaface. 
+will need to be configured and administrated in order to use the Apache Libcloud Python library and Azure CLI Interface. 
+This report will take you through the steps to configure the Azure environment as well as touching on 
+the Apache Libcloud Python ASM and ARM libraries and Azure CLI Interface. 
 Last, you will find a follow up of observations and challenges encountered though the project and process.
 
-Note: regardless of outcome it is important to provide detail about interfacing with technologies 
-that work or do not work. The reason for this is technology is always changing. 
-What works today may not work tomorrow and vice versa. By learning coreconcepts about the technology an 
-individual will be aquainted with the technology and postioned well to use the technology in the future.
+Note: Regardless of outcome, it is important to provide detail about interfacing with technologies 
+that work or do not work. The reason for this is that technology is always changing. 
+What works today may not work tomorrow and vice versa. By learning core-concepts about the technology an 
+individual will be gain experience with the technology and postioned well to use the technology in the future.
 
 ## Requirements
 
@@ -42,7 +42,7 @@ To start working in the Azure environment,
 you will to first need to set up an Azure Student Account. 
 You can set up and activate an Azure student account at: <https://azure.microsoft.com/en-us/free/students/>. 
 
-When you sign up for an Azure free account, you ontain a `Free Trial` subscription, 
+When you sign up for an Azure free account, you obtain a `Free Trial` subscription, 
 which provides you $200 in Azure credits for 30 days and 12 months of free services. 
 At the end of 12 months and 30 days, Azure disables your subscription. 
 Your subscription is disabled to protect you from accidentally incurring charges for 
@@ -152,7 +152,7 @@ Choose a `static` IP unless you do not mind the IP changing:
 
 Then click `save`.
 
-Note: If you have not configured the `port` that virtaul machine connection will occur, 
+Note: If you have not configured the `port` that virtual machine connection will occur, 
 then connection will not be successful.
 
 In the Virtual machine settings click `Connect` and review the connection settings.
@@ -170,7 +170,7 @@ Select `Yes` when prompted:
 
 ![@label](images/cacheputtykey.png)
 
-After the key is cached, next time you enter the Puttry client, you will be prompted to enter the 
+After the key is cached, next time you enter the Putty client, you will be prompted to enter the 
 server credentials (username\password) as specified in the virtual machine setup.
 
 Once credentials are provided successfully, you will be logged into your virtual machine:
@@ -234,7 +234,7 @@ To connect to Azure, you need an Azure `Subscription ID` and `certificate file`.
 #### Generating and uploading a certificate file and obtaining subscription ID
 To be able to connect to the Azure environment with the Libcloud Azure ASM Compute Driver, 
 generate a X.509 certificate which will be used for authentication.
-After the certificate has been genrerated it will need to be uploaded to the Azure Management Portal.
+After the certificate has been generated it will need to be uploaded to the Azure Management Portal.
 On Linux, you can generate the certificate file using the commands shown below:
 
 ```bash
@@ -287,7 +287,7 @@ Next, select `Upload` to upload the certificate:
 
 ![@label](images/upload.png)
 
-Choose a subscription and provide the path to the .Cer Certifcate file, 
+Choose a subscription and provide the path to the .Cer Certificate file, 
 then select `Upload` to associate the certificate with the subscription:
 
 ![@label](images/uploadcertificates.png)
@@ -373,7 +373,7 @@ When you have code that needs to access or modify resources, you can create an i
 This identity is known as a service principal. 
 You can then assign the required permissions to the service principal. 
 
-The follwoing steps will show you how to use the Azure Portal to create the service principal. 
+The following steps will show you how to use the Azure Portal to create the service principal. 
 
 The steps outline a single-tenant application where the application is intended to run within 
 only one organization. You typically use single-tenant applications for line-of-business applications 
@@ -457,7 +457,7 @@ A service principal is now set up.
 When programmatically signing in, you need to pass the tenant ID with your authentication request.
 
 Connect to the Azure Portal and login: <https://portal.azure.com>
-Select the `Azure Active Directory Default Direcctory overview` select the `Properties` option.
+Select the `Azure Active Directory Default Directory overview` select the `Properties` option.
 
 ![@label](images/defaultdirectoryproperties.png)
 
@@ -473,8 +473,8 @@ Select App registrations in Azure AD, select your application:
 
 ![@label](images/andrewtestapp.png)
 
-Copy the `Application ID`so that you can store it in your application code.
-Do this by choosing the application `Settings` and locating `Keys`, then selecting `Keys`.
+Copy the `Application ID` so that you can store it in your application code.
+Do this by choosing the application `Settings`  and locating `Keys`, then selecting `Keys`.
 
 ![@label](images/applicationsettingskey.png)
 
@@ -510,7 +510,7 @@ only users with an administrator role may register these types of applications.
 See available roles:
 <https://docs.microsoft.com/en-us/azure/active-directory/users-groups-roles/directory-assign-admin-roles#available-roles> 
 
-And and role permissions: 
+And role permissions: 
 <https://docs.microsoft.com/en-us/azure/active-directory/users-groups-roles/directory-assign-admin-roles#role-permissions>.
 
 To learn about available administrator roles and the specific permissions in Azure AD that 
@@ -828,9 +828,9 @@ There are also quickstarts for other popular services.
 
 With the stated goal of this project being to interface with an Azure Virtual Machine 
 using the Apache Libcloud Python library as well as the Microsoft CLI interface, 
-there has been succees and challenges. This was not effort wasted in my opinion because 
-it allow for the interaction with various points of technology. Additionally this process 
-has provided me with a considerable amount of Azure adminstration knowledge the is critical
+there has been success and challenges. This was not effort wasted in my opinion because 
+it allowed for the interaction with various points of technology. Additionally this process 
+has provided me with a considerable amount of Azure administration knowledge the is critical
 when working with an Azure Cloud environment.
 
 Here is additional detail about the project and process:
@@ -840,12 +840,12 @@ to admnistrator in order to interface with the Apache Libcloud ASM Driver and Az
 This process alone was a considerable effort and project to accomplish into a series of repeatable steps 
 as outlined in this writing.
 
-Unforseen challenges encountered in this project were:
-* Inconsistent functionablity with the Libcloud ASM and ARM drivers preventing expected behavior.
+Unforeseen challenges encountered in this project were:
+* Inconsistent functionality with the Libcloud ASM and ARM drivers preventing expected behavior.
 * Limited documentation and examples to interact with the Libcloud ASM and ARM drivers.
 
 The Microsoft Azure CLI was the easiest and best documented interface between all 3 choices that I reviewed.
 
-In conclusion this was a challenging and rewarding project with minor successful outcome related to interfacing with a provider and integrating with Clouldmesh, but major success and knowledege was gained in interacting with the Azure Cloud environment directly.
+In conclusion this was a challenging and rewarding project with minor successful outcome related to interfacing with a provider and integrating with Clouldmesh, but major success and knowledge was gained in interacting with the Azure Cloud environment directly.
 
 
