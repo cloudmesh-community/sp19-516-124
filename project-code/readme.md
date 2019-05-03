@@ -12,7 +12,7 @@ using the Apache Libcloud Python library as well as the Microsoft CLI interface.
 
 |  | Links |
 |---------------|-------|
-| Project | <https://github.com/cloudmesh-community/sp19-516-124/blob/master/project-report/report.md> |
+| Project | The project is the report. The link to the report is listed in the "Project Report" URL |
 | Project Report | <https://github.com/cloudmesh-community/sp19-516-124/blob/master/project-report/report.md> |
 
 
