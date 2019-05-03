@@ -25,6 +25,11 @@ This report will take you through the steps to configure the Azure enviroment as
 the Apache Libcloud Python ASM and ARM libraries and Azure CLI Interaface. 
 Last, you will find a follow up of observations and challenges encountered though the project and process.
 
+Note: regardless of outcome it is important to provide detail about interfacing with technologies 
+that work or do not work. The reason for this is technology is always changing. 
+What works today may not work tomorrow and vice versa. By learning coreconcepts about the technology an 
+individual will be aquainted with the technology and postioned well to use the technology in the future.
+
 ## Requirements
 
 * A computer where you have administrative rights to install applications.
@@ -823,8 +828,12 @@ There are also quickstarts for other popular services.
 
 With the stated goal of this project being to interface with an Azure Virtual Machine 
 using the Apache Libcloud Python library as well as the Microsoft CLI interface, 
-there has been succees and challenges.
+there has been succees and challenges. This was not effort wasted in my opinion because 
+it allow for the interaction with various points of technology. Additionally this process 
+has provided me with a considerable amount of Azure adminstration knowledge the is critical
+when working with an Azure Cloud environment.
 
+Here is additional detail about the project and process:
 As Illustrated above, a Microsoft Azure environment has been successfully provisioned 
 to admnistrator in order to interface with the Apache Libcloud ASM Driver and Azure CLI interface.
 
@@ -837,6 +846,6 @@ Unforseen challenges encountered in this project were:
 
 The Microsoft Azure CLI was the easiest and best documented interface between all 3 choices that I reviewed.
 
-In conclusion this was a challenging and rewarding project with minor successful outcome.
+In conclusion this was a challenging and rewarding project with minor successful outcome related to interfacing with a provider and integrating with Clouldmesh, but major success and knowledege was gained in interacting with the Azure Cloud environment directly.
 
 
